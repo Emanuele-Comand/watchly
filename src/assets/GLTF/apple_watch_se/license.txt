@@ -1,0 +1,11 @@
+Model Information:
+* title:	Apple Watch SE
+* source:	https://sketchfab.com/3d-models/apple-watch-se-cae10ac6b9a547beb132485761ed4b72
+* author:	Valentine_crut (https://sketchfab.com/Valentine_crut)
+
+Model License:
+* license type:	CC-BY-4.0 (http://creativecommons.org/licenses/by/4.0/)
+* requirements:	Author must be credited. Commercial use is allowed.
+
+If you use this 3D model in your project be sure to copy paste this credit wherever you share it:
+This work is based on "Apple Watch SE" (https://sketchfab.com/3d-models/apple-watch-se-cae10ac6b9a547beb132485761ed4b72) by Valentine_crut (https://sketchfab.com/Valentine_crut) licensed under CC-BY-4.0 (http://creativecommons.org/licenses/by/4.0/)
