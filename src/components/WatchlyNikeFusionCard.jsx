@@ -1,4 +1,5 @@
 import React from "react";
+import { motion } from "framer-motion";
 import watchImg from "/src/assets/Apple_watch_nike-removebg-preview.png";
 import Container from "./Container";
 
@@ -42,8 +43,19 @@ const DotPattern = ({ position = "left" }) => {
 };
 
 const WatchlyNikeFusionCard = () => (
-  <Container padding="py-32">
-    <div className="bg-white rounded-2xl flex flex-col gap-40 md:flex-row items-center py-16 justify-center relative overflow-hidden">
+  <motion.div
+    initial={{ width: "100vw" }}
+    whileInView={{ width: "calc(100vw - 256px)" }}
+    transition={{ duration: 3, ease: "easeInOut" }}
+    viewport={{ once: false, amount: 0.4 }}
+  >
+    <motion.div
+      initial={{ borderRadius: "0px" }}
+      whileInView={{ borderRadius: "25px" }}
+      transition={{ duration: 3, ease: "easeInOut" }}
+      viewport={{ once: false, amount: 0.4 }}
+      className="bg-white rounded- flex flex-col gap-40 md:flex-row items-center py-16 justify-center relative overflow-hidden"
+    >
       {/* Colonna sinistra: pattern di pallini */}
       <div className="absolute left-0 top-0 bottom-0 flex items-center rotate-180 pb-[56px]">
         <DotPattern position="left" />
@@ -88,8 +100,8 @@ const WatchlyNikeFusionCard = () => (
       <div className="absolute right-0 top-0 bottom-0 flex items-center">
         <DotPattern />
       </div>
-    </div>
-  </Container>
+    </motion.div>
+  </motion.div>
 );
 
 export default WatchlyNikeFusionCard;

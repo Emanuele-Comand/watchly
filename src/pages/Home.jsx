@@ -8,7 +8,9 @@ const Home = () => {
     <Background>
       <Navbar />
       <Hero />
-      <WatchlyNikeFusionCard />
+      <div className="flex justify-center">
+        <WatchlyNikeFusionCard />
+      </div>
     </Background>
   );
 };
