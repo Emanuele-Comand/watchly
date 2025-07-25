@@ -2,6 +2,7 @@ import Navbar from "../components/Navbar";
 import Background from "../components/Background";
 import Hero from "../components/Hero";
 import WatchlyNikeFusionCard from "../components/WatchlyNikeFusionCard";
+import Features from "../components/Features";
 
 const Home = () => {
   return (
@@ -11,6 +12,7 @@ const Home = () => {
       <div className="flex justify-center">
         <WatchlyNikeFusionCard />
       </div>
+      <Features />
     </Background>
   );
 };
