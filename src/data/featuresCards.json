@@ -1,0 +1,44 @@
+[
+  {
+    "id": "glass",
+    "subtitle": "1.78″ tempered glass display",
+    "title": "AeroGlass 1.78: Durability and Comfort",
+    "image": "src/assets/Colours no bg/smart_watch_realistic-Photoroom.png",
+    "useBackground": false
+  },
+  {
+    "id": "materials",
+    "subtitle": "Ultra ligth materials",
+    "title": "Featherweight: just 28 g of pure lightness.",
+    "image": "src/assets/woman-using-smartwatch-with-e-mail-notifier-smartwatch-hand-device-notify-computer-internet-message.jpg",
+    "useBackground": true
+  },
+  {
+    "id": "health",
+    "subtitle": "Health tracking",
+    "title": "Health tracking functionalitis",
+    "image": "src/assets/Health.png",
+    "useBackground": false
+  },
+  {
+    "id": "security",
+    "subtitle": "Security",
+    "title": "When you need an help",
+    "image": "src/assets/colored-city-map-with-information/2981189.jpg",
+    "useBackground": true
+  },
+  {
+    "id": "connectivity",
+    "subtitle": "Connectivity",
+    "title": "The world at your wrist",
+    "image": "src/assets/smartwatch-with-incoming-call-display/1464.jpg",
+    "useBackground": false
+  },
+  {
+    "id": "mobile",
+    "subtitle": "Watchly + Mobile",
+    "title": "When you need an help",
+    "image": "src/assets/digital-device-mockup-set/89352.jpg",
+    "useBackground": true
+  }
+]

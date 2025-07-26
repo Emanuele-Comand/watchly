@@ -3,7 +3,7 @@ import React from "react";
 const Container = ({
   children,
   className = "",
-  maxWidth = "max-w-7xl",
+  maxWidth = "max-w-full",
   padding = "px-[128px]",
   margin = "mx-[128px]",
   background = "",
