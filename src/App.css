@@ -1,3 +1,53 @@
 @import "tailwindcss";
 
 
+
+.swiper-pagination-bullet {
+  width: 10px !important;
+  height: 10px !important;
+  background-color: white !important;
+  margin-right: 20px !important; 
+}
+  
+  .swiper-pagination-bullet-active {
+    opacity: 1;
+  }
+  
+  .swiper-container {
+  position: relative;
+  padding-bottom: 50px;
+}
+
+.swiper-pagination {
+  position: absolute !important;
+  bottom: 0 !important;
+  left: 50% !important;
+  transform: translateX(-52%) !important;
+  margin-top: 20px !important;
+  text-align: center !important;
+  z-index: 10 !important;
+  display: flex !important;
+  justify-content: center !important;
+  align-items: center !important;
+  visibility: visible !important;
+  opacity: 1 !important;
+}
+
+.swiper-scrollbar {
+  position: relative !important;
+  background: rgba(0, 0, 0, 0.1) !important;
+  border-radius: 10px !important;
+  height: 8px !important;
+  margin-top: 20px !important;
+}
+
+.swiper-scrollbar-drag {
+  background: #007bff !important;
+  border-radius: 10px !important;
+  height: 100% !important;
+  cursor: grab !important;
+}
+
+.swiper-scrollbar-drag:active {
+  cursor: grabbing !important;
+}
