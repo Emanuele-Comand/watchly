@@ -1,7 +1,13 @@
 import Container from "./Container";
 import BuyBtn from "./BuyBtn";
+import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
+import { faCircleUser } from "@fortawesome/free-solid-svg-icons";
+import { faCartShopping } from "@fortawesome/free-solid-svg-icons";
+import UserDropdown from "./UserDropdown";
+import { useState } from "react";
 
 const Navbar = () => {
+  const [isUserDropdownOpen, setIsUserDropdownOpen] = useState(false);
   return (
     <Container
       maxWidth="max-w-full"
@@ -23,7 +29,21 @@ const Navbar = () => {
           About us
         </a>
       </div>
-      <BuyBtn />
+      <div className="flex items-center gap-5 text-white cursor-pointer">
+        <div className="relative">
+          <FontAwesomeIcon
+            icon={faCircleUser}
+            size="2x"
+            onMouseEnter={() => setIsUserDropdownOpen(true)}
+          />
+          {isUserDropdownOpen && (
+            <div onMouseLeave={() => setIsUserDropdownOpen(false)}>
+              <UserDropdown />
+            </div>
+          )}
+        </div>
+        <FontAwesomeIcon icon={faCartShopping} size="2x" />
+      </div>
     </Container>
   );
 };
