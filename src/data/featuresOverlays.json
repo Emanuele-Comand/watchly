@@ -1,0 +1,32 @@
+[
+  {
+    "id": "glass",
+    "image": "src/assets/Colours no bg/smart_watch_realistic-Photoroom.png",
+    "description": " The 1.78″ tempered glass display with rounded edges and aerospace‑grade aluminum case ensures both lightness and durability. The fluoroelastomer band provides all‑day comfort, even during intense workouts."
+  },
+  {
+    "id": "materials",
+    "image": "src/assets/woman-using-smartwatch-with-e-mail-notifier-smartwatch-hand-device-notify-computer-internet-message.jpg",
+    "description": " Crafted from aerospace-grade aluminum and reinforced sapphire glass, Watchly’s featherweight design weighs in at a mere 28 g—lighter than a stack of five credit cards. This ultralight construction ensures you’ll barely notice it on your wrist, whether you’re powering through your workout or moving seamlessly from desk to dinner. Despite its minimal mass, Watchly remains incredibly durable and scratch‑resistant, striking the perfect balance between strength and comfort. Embrace the freedom of pure lightness—experience every moment without the weight."
+  },
+  {
+    "id": "health",
+    "image": "src/assets/Health.png",
+    "description": " Next‑generation optical sensors monitor heart rate, blood oxygen, and stress levels in real time. Get smart hydration and breathing reminders to stay at your peak wellness."
+  },
+  {
+    "id": "security",
+    "image": "src/assets/colored-city-map-with-information/2981189.jpg",
+    "description": "With Watchly’s SOS Tracking, help is always just a tap away. In an emergency, press and hold the dedicated SOS button to instantly alert your preset contacts with your real‑time GPS location. If you’re unable to reach your phone, Watchly automatically sends continuous location updates and audio recordings so loved ones or emergency services know exactly where you are—and what’s happening. Built‑in fall detection even triggers SOS alerts on your behalf if a hard impact is detected and you can’t respond. Stay safe and connected, wherever life takes you."
+  },
+  {
+    "id": "connectivity",
+    "image": "src/assets/smartwatch-with-incoming-call-display/1464.jpg",
+    "description": "Stay connected wherever you go with Watchly’s seamless LTE and Bluetooth connectivity. Make and receive calls directly from your wrist—no phone required—thanks to its built‑in eSIM, crystal‑clear speaker, and noise‑cancelling microphone. Pair effortlessly with your smartphone via Bluetooth to sync contacts, messages, and notifications in real time. Whether you’re on a run or caught without your phone, Watchly keeps you in touch with the people who matter most."
+  },
+  {
+    "id": "mobile",
+    "image": "src/assets/digital-device-mockup-set/89352.jpg",
+    "description": "Watchly pairs effortlessly with your mobile device to deliver a unified experience across screens. Seamlessly sync your health metrics, activity goals, and sleep data between watch and phone, so you can dive deeper into insights on the larger display. Control your music library or podcast queue from either device, and pick up calls or reply to messages exactly where you left off—whether on wrist or handset. Automatic app and firmware updates keep both devices in lockstep, ensuring you always have the latest features at your fingertips"
+  }
+]

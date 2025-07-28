@@ -5,7 +5,7 @@ import FeaturesCard from "./FeaturesCard";
 import "swiper/css";
 import "swiper/css/pagination";
 
-const FeaturesCarousel = ({ featuresData }) => {
+const FeaturesCarousel = ({ featuresData, onCardClick }) => {
   return (
     <div className="swiper-container">
       <Swiper
@@ -27,7 +27,7 @@ const FeaturesCarousel = ({ featuresData }) => {
       >
         {featuresData.map((card) => (
           <SwiperSlide key={card.id}>
-            <FeaturesCard card={card} />
+            <FeaturesCard card={card} onClick={() => onCardClick(card.id)} />
           </SwiperSlide>
         ))}
       </Swiper>

@@ -9,7 +9,7 @@ import FeaturesCarousel from "./FeaturesCarousel";
 import featuresData from "../data/featuresCards.json";
 import Container from "./Container";
 
-const Features = () => {
+const Features = ({ onCardClick }) => {
   // Varianti di animazione per gli elementi
   const containerVariants = {
     hidden: { opacity: 0 },
@@ -185,7 +185,10 @@ const Features = () => {
         </motion.div>
       </Container>
       <div className="ml-[140px]">
-        <FeaturesCarousel featuresData={featuresData} />
+        <FeaturesCarousel
+          featuresData={featuresData}
+          onCardClick={onCardClick}
+        />
       </div>
     </>
   );

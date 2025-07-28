@@ -1,7 +1,7 @@
 import { faCirclePlus } from "@fortawesome/free-solid-svg-icons";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 
-const FeaturesCard = ({ card }) => {
+const FeaturesCard = ({ card, onClick }) => {
   return (
     <>
       <div className="py-16 text-center">
@@ -12,6 +12,7 @@ const FeaturesCard = ({ card }) => {
         >
           <div
             key={card.id}
+            onClick={onClick}
             style={
               card.useBackground
                 ? {
