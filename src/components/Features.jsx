@@ -7,148 +7,44 @@ import DragDropIcon from "./DragDropIcon";
 import { motion } from "framer-motion";
 import FeaturesCarousel from "./FeaturesCarousel";
 import featuresData from "../data/featuresCards.json";
+import animations from "../data/animations.json";
 import Container from "./Container";
 
 const Features = ({ onCardClick }) => {
-  // Varianti di animazione per gli elementi
-  const containerVariants = {
-    hidden: { opacity: 0 },
-    visible: {
-      opacity: 1,
-      transition: {
-        staggerChildren: 0.3,
-        delayChildren: 0.2,
-      },
-    },
-  };
-
-  const titleVariants = {
-    hidden: {
-      opacity: 0,
-      y: -100,
-      scale: 0.8,
-    },
-    visible: {
-      opacity: 1,
-      y: 0,
-      scale: 1,
-      transition: {
-        duration: 0.8,
-        ease: "easeOut",
-        type: "spring",
-        stiffness: 100,
-      },
-    },
-  };
-
-  const priceVariants = {
-    hidden: {
-      opacity: 0,
-      x: -100,
-      rotateY: -90,
-    },
-    visible: {
-      opacity: 1,
-      x: 0,
-      rotateY: 0,
-      transition: {
-        duration: 0.6,
-        ease: "easeOut",
-        delay: 0.4,
-      },
-    },
-  };
-
-  const buttonVariants = {
-    hidden: {
-      opacity: 0,
-      scale: 0,
-      rotate: -180,
-    },
-    visible: {
-      opacity: 1,
-      scale: 1,
-      rotate: 0,
-      transition: {
-        duration: 0.7,
-        ease: "easeOut",
-        type: "spring",
-        stiffness: 200,
-        delay: 0.6,
-      },
-    },
-  };
-
-  const subtitleVariants = {
-    hidden: {
-      opacity: 0,
-      y: 50,
-      filter: "blur(10px)",
-    },
-    visible: {
-      opacity: 1,
-      y: 0,
-      filter: "blur(0px)",
-      transition: {
-        duration: 0.8,
-        ease: "easeOut",
-        delay: 0.8,
-      },
-    },
-  };
-
-  const dragIconVariants = {
-    hidden: {
-      opacity: 0,
-      x: 100,
-      rotate: 45,
-    },
-    visible: {
-      opacity: 1,
-      x: 0,
-      rotate: 0,
-      transition: {
-        duration: 0.6,
-        ease: "easeOut",
-        delay: 1.0,
-      },
-    },
-  };
-
   return (
     <>
       <Container>
         <motion.div
           className="flex-col items-center text-center py-16"
-          variants={containerVariants}
+          variants={animations.containerVariants}
           initial="hidden"
           whileInView="visible"
           viewport={{ once: true, amount: 0.3 }}
         >
           <motion.h1
-            className="text-6xl font-bold bg-gradient-to-b from-white to-gray-950 text-transparent bg-clip-text"
-            variants={titleVariants}
+            className="text-5xl font-bold bg-gradient-to-b from-white to-gray-950 text-transparent bg-clip-text"
+            variants={animations.titleVariants}
           >
             THIN AND POWERFUL
           </motion.h1>
           <motion.p
             className="text-2xl  text-white font-semibold py-8"
-            variants={priceVariants}
+            variants={animations.priceVariants}
           >
             From $299 or $33.25 per month
           </motion.p>
-          <motion.div variants={buttonVariants}>
+          <motion.div variants={animations.buttonVariants}>
             <BuyBtn />
           </motion.div>
           <motion.p
             className="text-white font-light italic text-lg py-8"
-            variants={subtitleVariants}
+            variants={animations.subtitleVariants}
           >
             Grab the models take a look to Watchly
           </motion.p>
           <motion.div
             className="flex justify-center items-center"
-            variants={dragIconVariants}
+            variants={animations.dragIconVariants}
           >
             <DragDropIcon className="w-30 h-30" />
           </motion.div>
@@ -177,8 +73,8 @@ const Features = ({ onCardClick }) => {
             </Canvas>
           </div>
           <motion.h1
-            className="text-6xl font-bold bg-gradient-to-b from-white to-gray-600 text-transparent bg-clip-text text-center pt-16"
-            variants={titleVariants}
+            className="text-5xl font-bold bg-gradient-to-b from-white to-gray-600 text-transparent bg-clip-text text-center pt-16"
+            variants={animations.titleVariants}
           >
             DISCOVER WATCHLY
           </motion.h1>

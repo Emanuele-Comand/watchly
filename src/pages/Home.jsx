@@ -5,6 +5,7 @@ import Hero from "../components/Hero";
 import WatchlyNikeFusionCard from "../components/WatchlyNikeFusionCard";
 import Features from "../components/Features";
 import FeaturesOverlays from "../components/FeaturesOverlays";
+import Reviews from "../components/Reviews";
 
 const Home = () => {
   const [activeOverlay, setActiveOverlay] = useState(null);
@@ -25,6 +26,7 @@ const Home = () => {
       </div>
       <Features onCardClick={openOverlay} />
       <FeaturesOverlays activeOverlay={activeOverlay} onClose={closeOverlay} />
+      <Reviews />
     </Background>
   );
 };

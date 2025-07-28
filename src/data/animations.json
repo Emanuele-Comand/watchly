@@ -1,0 +1,100 @@
+{
+  "containerVariants": {
+    "hidden": { "opacity": 0 },
+    "visible": {
+      "opacity": 1,
+      "transition": {
+        "staggerChildren": 0.3,
+        "delayChildren": 0.2
+      }
+    }
+  },
+  "titleVariants": {
+    "hidden": {
+      "opacity": 0,
+      "y": -100,
+      "scale": 0.8
+    },
+    "visible": {
+      "opacity": 1,
+      "y": 0,
+      "scale": 1,
+      "transition": {
+        "duration": 0.8,
+        "ease": "easeOut",
+        "type": "spring",
+        "stiffness": 100
+      }
+    }
+  },
+  "priceVariants": {
+    "hidden": {
+      "opacity": 0,
+      "x": -100,
+      "rotateY": -90
+    },
+    "visible": {
+      "opacity": 1,
+      "x": 0,
+      "rotateY": 0,
+      "transition": {
+        "duration": 0.6,
+        "ease": "easeOut",
+        "delay": 0.4
+      }
+    }
+  },
+  "buttonVariants": {
+    "hidden": {
+      "opacity": 0,
+      "scale": 0,
+      "rotate": -180
+    },
+    "visible": {
+      "opacity": 1,
+      "scale": 1,
+      "rotate": 0,
+      "transition": {
+        "duration": 0.7,
+        "ease": "easeOut",
+        "type": "spring",
+        "stiffness": 200,
+        "delay": 0.6
+      }
+    }
+  },
+  "subtitleVariants": {
+    "hidden": {
+      "opacity": 0,
+      "y": 50,
+      "filter": "blur(10px)"
+    },
+    "visible": {
+      "opacity": 1,
+      "y": 0,
+      "filter": "blur(0px)",
+      "transition": {
+        "duration": 0.8,
+        "ease": "easeOut",
+        "delay": 0.8
+      }
+    }
+  },
+  "dragIconVariants": {
+    "hidden": {
+      "opacity": 0,
+      "x": 100,
+      "rotate": 45
+    },
+    "visible": {
+      "opacity": 1,
+      "x": 0,
+      "rotate": 0,
+      "transition": {
+        "duration": 0.6,
+        "ease": "easeOut",
+        "delay": 1.0
+      }
+    }
+  }
+}
