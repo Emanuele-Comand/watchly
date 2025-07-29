@@ -9,7 +9,9 @@ const BrandsBanner = () => {
   useEffect(() => {
     const calculateWidth = () => {
       if (contentRef.current) {
-        const singleCopyWidth = contentRef.current.scrollWidth / 2;
+        // Calcola la larghezza di una singola copia includendo il gap
+        const totalWidth = contentRef.current.scrollWidth;
+        const singleCopyWidth = totalWidth / 2;
         setContentWidth(singleCopyWidth);
       }
     };
@@ -29,6 +31,7 @@ const BrandsBanner = () => {
       calculateWidth();
     }
   }, []);
+
   return (
     <div className="bg-white py-16 overflow-hidden">
       <motion.div
@@ -37,7 +40,7 @@ const BrandsBanner = () => {
         animate={
           contentWidth > 0
             ? {
-                x: [0, -contentWidth],
+                x: [0, -contentWidth - 32],
               }
             : {}
         }
