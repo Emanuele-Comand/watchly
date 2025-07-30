@@ -1,0 +1,38 @@
+[
+  {
+    "id": 1,
+    "name": "Zoe Bennett",
+    "review": "“I can’t imagine my day without Watchly. Smart notifications, seamless music control, and a battery that lasts—this watch does it all with style.”",
+    "image": "src/assets/Testimonials/michael-dam-mEZ3PoFGs_k-unsplash.jpg"
+  },
+  {
+    "id": 2,
+    "name": "Lucas Reid",
+    "review": "“ love how Watchly seamlessly blends style and function. The crisp display shines outdoors, and the custom watch faces add a personal touch to every outfit.”",
+    "image": "src/assets/Testimonials/man-with-photo-camera-his-holidays.jpg"
+  },
+  {
+    "id": 3,
+    "name": "Mia Clarke",
+    "review": "“Watchly’s polished aluminum finish and vibrant display always get compliments. It’s more than a gadget—it’s a fashion statement that works as hard as I do.”",
+    "image": "src/assets/Testimonials/portrait-beautiful-young-woman-standing-grey-wall.jpg"
+  },
+  {
+    "id": 4,
+    "name": "Mason Cole",
+    "review": "“From heart‑rate monitoring to turn‑by‑turn directions, Watchly keeps me informed and on track. It’s the ultimate productivity booster on my wrist.”",
+    "image": "src/assets/Testimonials/charles-etoroma-95UF6LXe-Lo-unsplash.jpg"
+  },
+  {
+    "id": 5,
+    "name": "Ava Monroe",
+    "review": "“Watchly’s fitness tracking is spot on—whether I’m running or doing yoga, it motivates me with real‑time stats. And it looks gorgeous while doing it!”",
+    "image": "src/assets/Testimonials/aiony-haust-3TLl_97HNJo-unsplash.jpg"
+  },
+  {
+    "id": 6,
+    "name": "Ethan Harper",
+    "review": "“Watchly’s sleek, lightweight design makes it my go‑to companion all day long. The intuitive interface lets me track workouts, messages, and even calls without missing a beat.”",
+    "image": "src/assets/Testimonials/ian-dooley-d1UPkiFd04A-unsplash.jpg"
+  }
+]
