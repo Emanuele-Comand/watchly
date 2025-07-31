@@ -6,6 +6,7 @@ import WatchlyNikeFusionCard from "../components/WatchlyNikeFusionCard";
 import Features from "../components/Features";
 import FeaturesOverlays from "../components/FeaturesOverlays";
 import Reviews from "../components/Reviews";
+import AboutUs from "../components/AboutUs";
 
 const Home = () => {
   const [activeOverlay, setActiveOverlay] = useState(null);
@@ -27,6 +28,7 @@ const Home = () => {
       <Features onCardClick={openOverlay} />
       <FeaturesOverlays activeOverlay={activeOverlay} onClose={closeOverlay} />
       <Reviews />
+      <AboutUs />
     </Background>
   );
 };
