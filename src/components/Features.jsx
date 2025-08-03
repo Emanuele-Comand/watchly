@@ -22,7 +22,10 @@ const Features = ({ onCardClick }) => {
         >
           <motion.h1
             className="text-5xl font-bold bg-gradient-to-b from-white to-gray-950 text-transparent bg-clip-text"
-            variants={animations.titleVariants}
+            initial={{ opacity: 0, y: 100 }}
+            whileInView={{ opacity: 1, y: 0 }}
+            transition={{ duration: 0.8, ease: "easeOut" }}
+            viewport={{ once: true, amount: 0.3 }}
           >
             THIN AND POWERFUL
           </motion.h1>
@@ -68,7 +71,10 @@ const Features = ({ onCardClick }) => {
           </div>
           <motion.h1
             className="text-5xl font-bold bg-gradient-to-b from-white to-gray-600 text-transparent bg-clip-text text-center pt-16"
-            variants={animations.titleVariants}
+            initial={{ opacity: 0, y: 100 }}
+            whileInView={{ opacity: 1, y: 0 }}
+            transition={{ duration: 0.8, ease: "easeOut" }}
+            viewport={{ once: true, amount: 0.3 }}
           >
             DISCOVER WATCHLY
           </motion.h1>

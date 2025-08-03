@@ -1,5 +1,4 @@
 import { motion } from "motion/react";
-import animations from "../data/animations";
 import about from "../data/about.json";
 
 import Container from "./Container";
@@ -9,7 +8,10 @@ const AboutUs = () => {
       <div className="flex flex-col items-center justify-center w-full">
         <motion.h1
           className="text-5xl font-bold bg-gradient-to-b from-white to-gray-950 text-transparent bg-clip-text"
-          variants={animations.titleVariants}
+          initial={{ opacity: 0, y: 100 }}
+          whileInView={{ opacity: 1, y: 0 }}
+          transition={{ duration: 0.8, ease: "easeOut" }}
+          viewport={{ once: true, amount: 0.3 }}
         >
           ABOUT US
         </motion.h1>
