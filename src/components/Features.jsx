@@ -2,7 +2,6 @@ import BuyBtn from "./BuyBtn";
 import { Canvas } from "@react-three/fiber";
 import { OrbitControls } from "@react-three/drei";
 import FirstGLTF from "./FirstGLTF";
-import SecondGLTF from "./SecondGLTF";
 import DragDropIcon from "./DragDropIcon";
 import { motion } from "framer-motion";
 import FeaturesCarousel from "./FeaturesCarousel";
@@ -40,7 +39,7 @@ const Features = ({ onCardClick }) => {
             className="text-white font-light italic text-lg py-8"
             variants={animations.subtitleVariants}
           >
-            Grab the models take a look to Watchly
+            Grab the Whatcly model take a look
           </motion.p>
           <motion.div
             className="flex justify-center items-center"
@@ -48,10 +47,13 @@ const Features = ({ onCardClick }) => {
           >
             <DragDropIcon className="w-30 h-30" />
           </motion.div>
-          <div className="grid grid-cols-2 w-full pt-16">
+          <div className="w-full pt-16 grid grid-cols-3 justify-items-center items-center">
+            <div className="text-white pt-20">
+              <p className="text-6xl font-bold uppercase">Super thin</p>
+            </div>
             <Canvas
-              camera={{ position: [0, 0, 5], fov: 75 }}
-              style={{ height: "400px", paddingLeft: "128px", cursor: "grab" }}
+              camera={{ position: [0, 0, 5], fov: 70 }}
+              style={{ height: "400px", cursor: "grab" }}
             >
               <OrbitControls
                 enablePan={true}
@@ -60,17 +62,9 @@ const Features = ({ onCardClick }) => {
               />
               <FirstGLTF />
             </Canvas>
-            <Canvas
-              camera={{ position: [0, 0, 5], fov: 75 }}
-              style={{ height: "400px", cursor: "grab" }}
-            >
-              <OrbitControls
-                enablePan={true}
-                enableZoom={false}
-                enableRotate={true}
-              />
-              <SecondGLTF />
-            </Canvas>
+            <div className="text-white pt-20">
+              <p className="text-6xl font-bold uppercase">Quality materials</p>
+            </div>
           </div>
           <motion.h1
             className="text-5xl font-bold bg-gradient-to-b from-white to-gray-600 text-transparent bg-clip-text text-center pt-16"

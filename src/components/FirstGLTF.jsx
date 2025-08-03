@@ -13,7 +13,7 @@ const FirstGLTF = () => {
         object={scene.scene}
         position={[0, 0, 0]}
         scale={1.5}
-        rotation={[0, 0, 0]}
+        rotation={[0, 1.5, 1.5]}
       />
     </>
   );

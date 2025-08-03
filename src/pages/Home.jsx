@@ -7,6 +7,7 @@ import Features from "../components/Features";
 import FeaturesOverlays from "../components/FeaturesOverlays";
 import Reviews from "../components/Reviews";
 import AboutUs from "../components/AboutUs";
+import Footer from "../components/Footer";
 
 const Home = () => {
   const [activeOverlay, setActiveOverlay] = useState(null);
@@ -29,6 +30,7 @@ const Home = () => {
       <FeaturesOverlays activeOverlay={activeOverlay} onClose={closeOverlay} />
       <Reviews />
       <AboutUs />
+      <Footer />
     </Background>
   );
 };
