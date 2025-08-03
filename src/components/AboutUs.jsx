@@ -1,69 +1,64 @@
-import aboutData from "../data/about.json";
-import Container from "./Container";
+import { motion } from "motion/react";
+import animations from "../data/animations";
+import about from "../data/about.json";
 
+import Container from "./Container";
 const AboutUs = () => {
   return (
-    <>
-      <div className="flex items-center justify-center pt-16">
-        <h1 className="text-5xl font-bold bg-gradient-to-b from-white to-gray-950 text-transparent bg-clip-text">
-          ABOUT US
-        </h1>
-      </div>
-
-      {aboutData.map((about, index) => (
-        <div
-          key={about.id}
-          className={`text-white w-full ${
-            about.gradient === "from-white to-gray-950"
-              ? "bg-gradient-to-r from-white to-gray-950"
-              : "bg-gradient-to-r from-gray-950 to-white"
-          } z-50`}
+    <Container>
+      <div className="flex flex-col items-center justify-center w-full">
+        <motion.h1
+          className="text-5xl font-bold bg-gradient-to-b from-white to-gray-950 text-transparent bg-clip-text"
+          variants={animations.titleVariants}
         >
-          <Container className="mt-16">
-            <div className="grid grid-cols-1 md:grid-cols-2 gap-16 items-center py-16">
-              {/* Se è la seconda sezione (index === 1), invertiamo l'ordine */}
-              {index === 1 ? (
+          ABOUT US
+        </motion.h1>
+        <div className="relative mt-20">
+          <div className="absolute inset-0 bg-white/10 backdrop-blur-md rounded-xl border border-white/20 shadow-2xl"></div>
+          <div className="relative z-10 grid grid-cols-2 grid-row-3 text-white justify-center items-center gap-16 pt-20 p-10">
+            {about.map((item, index) => {
+              return (
                 <>
-                  <div className="flex flex-col items-center justify-center text-center">
-                    <h2 className="text-3xl font-bold mb-4">{about.title}</h2>
-                    <p className="text-lg leading-relaxed">
-                      {about.description}
-                    </p>
-                  </div>
-                  <div className="flex justify-center">
-                    <div className="w-[546px] h-[364px] rounded-lg overflow-hidden">
-                      <img
-                        src={about.image}
-                        alt={about.title}
-                        className="w-full h-full object-cover"
-                      />
-                    </div>
-                  </div>
+                  {index === 1 ? (
+                    <>
+                      <div>
+                        <h2 className="text-2xl font-semibold text-center uppercase pb-10">
+                          {item.title}
+                        </h2>
+                        <p>{item.description}</p>
+                      </div>
+                      <div key={index}>
+                        <img
+                          src={item.image}
+                          alt={item.title}
+                          className="rounded-xl"
+                        />
+                      </div>
+                    </>
+                  ) : (
+                    <>
+                      <div key={index}>
+                        <img
+                          src={item.image}
+                          alt={item.title}
+                          className="rounded-xl"
+                        />
+                      </div>
+                      <div>
+                        <h2 className="text-2xl font-semibold text-center uppercase pb-10">
+                          {item.title}
+                        </h2>
+                        <p>{item.description}</p>
+                      </div>
+                    </>
+                  )}
                 </>
-              ) : (
-                <>
-                  <div className="flex justify-center items-center">
-                    <div className="w-[546px] h-[364px] rounded-lg overflow-hidden">
-                      <img
-                        src={about.image}
-                        alt={about.title}
-                        className="w-full h-full object-cover"
-                      />
-                    </div>
-                  </div>
-                  <div className="flex flex-col items-center justify-center text-center">
-                    <h2 className="text-3xl font-bold mb-4">{about.title}</h2>
-                    <p className="text-lg leading-relaxed">
-                      {about.description}
-                    </p>
-                  </div>
-                </>
-              )}
-            </div>
-          </Container>
+              );
+            })}
+          </div>
         </div>
-      ))}
-    </>
+      </div>
+    </Container>
   );
 };
 
