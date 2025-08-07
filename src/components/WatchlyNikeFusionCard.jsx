@@ -97,7 +97,7 @@ const WatchlyNikeFusionCard = () => (
         </div>
       </div>
       {/* Colonna destra: pattern di pallini ribaltato */}
-      <div className="absolute right-0 top-0 bottom-0 flex items-center">
+      <div className="absolute right-0 top-0 bottom-10 flex items-center">
         <DotPattern />
       </div>
     </motion.div>

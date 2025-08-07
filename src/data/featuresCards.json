@@ -16,7 +16,7 @@
   {
     "id": "health",
     "subtitle": "Health tracking",
-    "title": "Health tracking functionalitis",
+    "title": "Health tracking functionalities",
     "image": "src/assets/Health.png",
     "useBackground": false
   },

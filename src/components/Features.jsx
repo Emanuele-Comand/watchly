@@ -12,7 +12,7 @@ import Container from "./Container";
 const Features = ({ onCardClick }) => {
   return (
     <>
-      <Container>
+      <Container id="features">
         <motion.div
           className="flex-col items-center text-center py-16"
           variants={animations.containerVariants}

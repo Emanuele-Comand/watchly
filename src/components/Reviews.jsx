@@ -8,7 +8,7 @@ import reviews from "../data/reviews.json";
 const Reviews = () => {
   return (
     <>
-      <Container>
+      <Container id="reviews">
         <motion.div
           className="flex-col items-center text-center py-16"
           variants={animations.containerVariants}

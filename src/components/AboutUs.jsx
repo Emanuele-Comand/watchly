@@ -4,7 +4,7 @@ import about from "../data/about.json";
 import Container from "./Container";
 const AboutUs = () => {
   return (
-    <Container>
+    <Container id="about">
       <div className="flex flex-col items-center justify-center w-full">
         <motion.h1
           className="text-5xl font-bold bg-gradient-to-b from-white to-gray-950 text-transparent bg-clip-text"

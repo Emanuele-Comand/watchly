@@ -17,15 +17,27 @@ const Navbar = () => {
       <img
         src="/src/assets/Watchly_bianco-removebg-preview.png"
         className="w-25 h-25 cursor-pointer"
+        onClick={() => {
+          window.location.href = "#hero";
+        }}
       ></img>
       <div className="flex items-center gap-15 text-white">
-        <a className="hover:scale-110 transition-all duration-300" href="/">
+        <a
+          className="hover:scale-110 transition-all duration-300"
+          href="#features"
+        >
           Features
         </a>
-        <a className="hover:scale-110  transition-all duration-300" href="/">
+        <a
+          className="hover:scale-110  transition-all duration-300"
+          href="#reviews"
+        >
           Reviews
         </a>
-        <a className="hover:scale-110  transition-all duration-300" href="/">
+        <a
+          className="hover:scale-110  transition-all duration-300"
+          href="#about"
+        >
           About us
         </a>
       </div>
