@@ -1,26 +1,20 @@
-import { motion } from "motion/react";
 import about from "../data/about.json";
-
 import Container from "./Container";
+import React from "react";
+
 const AboutUs = () => {
   return (
     <Container id="about">
       <div className="flex flex-col items-center justify-center w-full">
-        <motion.h1
-          className="text-5xl font-bold bg-gradient-to-b from-white to-gray-950 text-transparent bg-clip-text"
-          initial={{ opacity: 0, y: 100 }}
-          whileInView={{ opacity: 1, y: 0 }}
-          transition={{ duration: 0.8, ease: "easeOut" }}
-          viewport={{ once: true, amount: 0.3 }}
-        >
+        <h1 className="text-5xl font-bold bg-gradient-to-b from-white to-gray-950 text-transparent bg-clip-text">
           ABOUT US
-        </motion.h1>
+        </h1>
         <div className="relative mt-20">
           <div className="absolute inset-0 bg-white/10 backdrop-blur-md rounded-xl border border-white/20"></div>
           <div className="relative z-10 grid grid-cols-2 grid-row-3 text-white justify-center items-center gap-16 pt-20 p-10">
             {about.map((item, index) => {
               return (
-                <>
+                <React.Fragment key={index}>
                   {index === 1 ? (
                     <>
                       <div>
@@ -29,7 +23,7 @@ const AboutUs = () => {
                         </h2>
                         <p>{item.description}</p>
                       </div>
-                      <div key={index}>
+                      <div>
                         <img
                           src={item.image}
                           alt={item.title}
@@ -39,7 +33,7 @@ const AboutUs = () => {
                     </>
                   ) : (
                     <>
-                      <div key={index}>
+                      <div>
                         <img
                           src={item.image}
                           alt={item.title}
@@ -54,7 +48,7 @@ const AboutUs = () => {
                       </div>
                     </>
                   )}
-                </>
+                </React.Fragment>
               );
             })}
           </div>

@@ -11,7 +11,7 @@ const Navbar = () => {
   return (
     <Container
       maxWidth="max-w-full"
-      className="fixed top-0 left-0 right-0 z-50 flex items-center justify-between bg-black"
+      className="fixed top-0 left-0 right-0 z-50 flex items-center justify-between bg-black/80 backdrop-blur-md"
       margin="mx-auto"
     >
       <img
