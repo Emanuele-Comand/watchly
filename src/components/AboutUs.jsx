@@ -16,7 +16,7 @@ const AboutUs = () => {
           ABOUT US
         </motion.h1>
         <div className="relative mt-20">
-          <div className="absolute inset-0 bg-white/10 backdrop-blur-md rounded-xl border border-white/20 shadow-2xl"></div>
+          <div className="absolute inset-0 bg-white/10 backdrop-blur-md rounded-xl border border-white/20"></div>
           <div className="relative z-10 grid grid-cols-2 grid-row-3 text-white justify-center items-center gap-16 pt-20 p-10">
             {about.map((item, index) => {
               return (
