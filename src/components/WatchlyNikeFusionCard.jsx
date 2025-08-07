@@ -47,13 +47,13 @@ const WatchlyNikeFusionCard = () => (
     initial={{ width: "100vw" }}
     whileInView={{ width: "calc(100vw - 256px)" }}
     transition={{ duration: 3, ease: "easeInOut" }}
-    viewport={{ once: false, amount: 0.4 }}
+    viewport={{ once: true, amount: 0.4 }}
   >
     <motion.div
       initial={{ borderRadius: "0px" }}
       whileInView={{ borderRadius: "25px" }}
       transition={{ duration: 3, ease: "easeInOut" }}
-      viewport={{ once: false, amount: 0.4 }}
+      viewport={{ once: true, amount: 0.4 }}
       className="bg-white rounded- flex flex-col gap-40 md:flex-row items-center py-16 justify-center relative overflow-hidden"
     >
       {/* Colonna sinistra: pattern di pallini */}

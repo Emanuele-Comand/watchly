@@ -19,8 +19,8 @@ const Hero = () => {
         amount={1}
         initial={{ opacity: 0 }}
         whileInView={{ opacity: 1 }}
-        transition={{ duration: 3, ease: "easeInOut" }}
-        viewport={{ once: false, amount: 0.4 }}
+        transition={{ duration: 1, ease: "easeInOut" }}
+        viewport={{ once: true, amount: 0.4 }}
       >
         <img
           src="/src/assets/Watchly_bianco-removebg-preview.png"
