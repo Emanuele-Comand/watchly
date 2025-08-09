@@ -5,22 +5,26 @@ import { faCircleUser } from "@fortawesome/free-solid-svg-icons";
 import { faCartShopping } from "@fortawesome/free-solid-svg-icons";
 import UserDropdown from "./UserDropdown";
 import { useState } from "react";
+import { Link } from "react-router-dom";
 
 const Navbar = () => {
   const [isUserDropdownOpen, setIsUserDropdownOpen] = useState(false);
+
   return (
     <Container
       maxWidth="max-w-full"
       className="fixed top-0 left-0 right-0 z-50 flex items-center justify-between bg-black/80 backdrop-blur-md"
       margin="mx-auto"
     >
-      <img
-        src="/src/assets/Watchly_bianco-removebg-preview.png"
-        className="w-25 h-25 cursor-pointer"
-        onClick={() => {
-          window.location.href = "#hero";
-        }}
-      ></img>
+      <Link to="/">
+        <img
+          src="/src/assets/Watchly_bianco-removebg-preview.png"
+          className="w-25 h-25 cursor-pointer"
+          onClick={() => {
+            window.location.href = "#hero";
+          }}
+        ></img>
+      </Link>
       <div className="flex items-center gap-15 text-white">
         <a
           className="hover:scale-110 transition-all duration-300"
@@ -50,7 +54,7 @@ const Navbar = () => {
           />
           {isUserDropdownOpen && (
             <div onMouseLeave={() => setIsUserDropdownOpen(false)}>
-              <UserDropdown />
+              <UserDropdown setIsUserDropdownOpen={setIsUserDropdownOpen} />
             </div>
           )}
         </div>
