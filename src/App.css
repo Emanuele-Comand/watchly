@@ -6,7 +6,7 @@
   
   .swiper-container {
   position: relative;
-  padding-bottom: 50px;
+  padding-bottom: 100px;
   margin-right: 128px;
 }
 
@@ -35,5 +35,20 @@
   opacity: 1 !important;
 }
 
+.swiper-pagination-market {
+  .swiper-pagination {
+    position: absolute !important;
+    bottom: 0 !important;
+    left: 50% !important;
+    transform: translateX(-50%) !important;
+    text-align: center !important;
+    z-index: 10 !important;
+    display: flex !important;
+    justify-content: center !important;
+    align-items: center !important;
+    visibility: visible !important;
+    opacity: 1 !important;
+  }
+}
 
 
