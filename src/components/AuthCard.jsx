@@ -1,11 +1,12 @@
 import { useAuthStore } from "../stores";
 import { useState } from "react";
+import { useNavigate } from "react-router-dom";
 
 const AuthCard = ({ authType }) => {
   const isSignUp = authType === "signup";
   const { login, signup, isLoading } = useAuthStore();
+  const navigate = useNavigate();
 
-  // State per i dati del form
   const [formData, setFormData] = useState({
     name: "",
     email: "",
@@ -13,10 +14,8 @@ const AuthCard = ({ authType }) => {
     confirmPassword: "",
   });
 
-  // State per gli errori
   const [errors, setErrors] = useState({});
 
-  // Gestione cambiamenti input
   const handleInputChange = (e) => {
     const { name, value } = e.target;
     setFormData((prev) => ({
@@ -24,7 +23,6 @@ const AuthCard = ({ authType }) => {
       [name]: value,
     }));
 
-    // Rimuovi errore quando l'utente inizia a digitare
     if (errors[name]) {
       setErrors((prev) => ({
         ...prev,
@@ -33,7 +31,6 @@ const AuthCard = ({ authType }) => {
     }
   };
 
-  // Validazione form
   const validateForm = () => {
     const newErrors = {};
 
@@ -61,7 +58,6 @@ const AuthCard = ({ authType }) => {
     return Object.keys(newErrors).length === 0;
   };
 
-  // Gestione submit form
   const handleSubmit = async (e) => {
     e.preventDefault();
 
@@ -80,10 +76,11 @@ const AuthCard = ({ authType }) => {
         await login(formData.email, formData.password);
       }
 
-      // Redirect o feedback di successo
-      console.log("Autenticazione completata!");
+      console.log("Authentication completed!", formData);
+
+      navigate("/");
     } catch (error) {
-      console.error("Errore durante l'autenticazione:", error);
+      console.error("Error during authentication:", error);
       setErrors({ general: "Errore durante l'autenticazione" });
     }
   };

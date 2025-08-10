@@ -6,9 +6,11 @@ import { faCartShopping } from "@fortawesome/free-solid-svg-icons";
 import UserDropdown from "./UserDropdown";
 import { useState } from "react";
 import { Link } from "react-router-dom";
+import { useAuthStore } from "../stores";
 
 const Navbar = () => {
   const [isUserDropdownOpen, setIsUserDropdownOpen] = useState(false);
+  const { user, isAuthenticated } = useAuthStore();
 
   return (
     <Container
@@ -45,20 +47,25 @@ const Navbar = () => {
           About us
         </a>
       </div>
-      <div className="flex items-center gap-5 text-white cursor-pointer">
-        <div className="relative">
-          <FontAwesomeIcon
-            icon={faCircleUser}
-            size="2x"
-            onMouseEnter={() => setIsUserDropdownOpen(true)}
-          />
+      <div className="flex items-center gap-5 text-white">
+        {isAuthenticated && <BuyBtn />}
+        <div className="relative cursor-pointer">
+          <div className="flex items-center gap-2">
+            <FontAwesomeIcon
+              icon={faCircleUser}
+              size="2x"
+              onMouseEnter={() => setIsUserDropdownOpen(true)}
+            />
+            {isAuthenticated && user && (
+              <span className="text-sm font-medium">Hi, {user.name}</span>
+            )}
+          </div>
           {isUserDropdownOpen && (
             <div onMouseLeave={() => setIsUserDropdownOpen(false)}>
               <UserDropdown setIsUserDropdownOpen={setIsUserDropdownOpen} />
             </div>
           )}
         </div>
-        <FontAwesomeIcon icon={faCartShopping} size="2x" />
       </div>
     </Container>
   );
