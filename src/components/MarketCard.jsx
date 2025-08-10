@@ -57,7 +57,9 @@ const MarketCard = () => {
                 alt={card.title}
               />
               <p className="text-2xl font-bold text-center">$299</p>
-              <AddToCart />
+              <div className="flex justify-center">
+                <AddToCart />
+              </div>
             </div>
           </div>
           <div className="mt-8 flex justify-center">

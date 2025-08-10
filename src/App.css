@@ -38,7 +38,7 @@
 .swiper-pagination-market {
   .swiper-pagination {
     position: absolute !important;
-    bottom: 0 !important;
+    bottom: 40px !important;
     left: 50% !important;
     transform: translateX(-50%) !important;
     text-align: center !important;
