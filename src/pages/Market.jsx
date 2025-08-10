@@ -24,17 +24,37 @@ const Market = () => {
             >
               Purchase your Watchly
             </motion.h1>
-            <p className="text-2xl font-bold text-center text-white mt-4">
-              You can buy max 20 items at a time
-            </p>
+            <motion.div
+              variants={animations.subtitleVariants}
+              initial="hidden"
+              whileInView="visible"
+              viewport={{ once: true, amount: 0.3 }}
+            >
+              <p className="text-2xl font-bold text-center text-white mt-4">
+                You can buy max 20 items at a time
+              </p>
+            </motion.div>
           </div>
           <MarketNikeCard />
-          <p className="text-2xl font-bold text-center text-white mt-16">
-            Swipe to choose your Watchly color
-          </p>
-          <div className="flex justify-center mt-4">
+          <motion.div
+            variants={animations.subtitleVariants}
+            initial="hidden"
+            whileInView="visible"
+            viewport={{ once: true, amount: 0.3 }}
+          >
+            <p className="text-2xl font-bold text-center text-white mt-16">
+              Swipe to choose your Watchly color
+            </p>
+          </motion.div>
+          <motion.div
+            className="flex justify-center mt-4"
+            variants={animations.dragIconVariants}
+            initial="hidden"
+            whileInView="visible"
+            viewport={{ once: true, amount: 0.3 }}
+          >
             <SwipeIcons className="w-30 h-30" />
-          </div>
+          </motion.div>
           <MarketCard />
         </Container>
         <Footer />

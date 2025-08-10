@@ -17,16 +17,19 @@ const Navbar = () => {
       className="fixed top-0 left-0 right-0 z-50 flex items-center justify-between bg-black/80 backdrop-blur-md"
       margin="mx-auto"
     >
-      <Link to="/">
-        <img
-          src="/src/assets/Watchly_bianco-removebg-preview.png"
-          className="w-25 h-25 cursor-pointer"
-          onClick={() => {
-            window.location.href = "#hero";
-          }}
-        ></img>
-      </Link>
-      <div className="flex items-center gap-15 text-white">
+      <div className="flex items-center">
+        <Link to="/">
+          <img
+            src="/src/assets/Watchly_bianco-removebg-preview.png"
+            className="w-25 h-25 cursor-pointer"
+            onClick={() => {
+              window.location.href = "#hero";
+            }}
+          ></img>
+        </Link>
+      </div>
+
+      <div className="absolute left-1/2 transform -translate-x-1/2 flex items-center gap-15 text-white">
         <a
           className="hover:scale-110 transition-all duration-300"
           href="#features"
@@ -46,6 +49,8 @@ const Navbar = () => {
           About us
         </a>
       </div>
+
+      {/* Colonna destra - BuyBtn e UserDropdown */}
       <div className="flex items-center gap-5 text-white">
         {isAuthenticated && <BuyBtn />}
         <div className="relative cursor-pointer">
