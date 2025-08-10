@@ -1,7 +1,7 @@
 import Lottie from "lottie-react";
-import dragDropAnimation from "../data/drag-and-drop.json";
+import swipeAnimation from "../data/swipe-left.json";
 
-const DragDropIcon = ({
+const SwipeIcons = ({
   className = "text-white",
   style = {},
   color = "white",
@@ -25,7 +25,7 @@ const DragDropIcon = ({
 
   return (
     <Lottie
-      animationData={dragDropAnimation}
+      animationData={swipeAnimation}
       loop={true}
       autoplay={true}
       className={className}
@@ -34,4 +34,4 @@ const DragDropIcon = ({
   );
 };
 
-export default DragDropIcon;
+export default SwipeIcons;

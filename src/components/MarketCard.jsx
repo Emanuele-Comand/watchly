@@ -46,7 +46,7 @@ const MarketCard = () => {
     >
       {cardsData.map((card, index) => (
         <SwiperSlide key={card.id}>
-          <div className="bg-white flex flex-col items-center justify-center rounded-xl mt-16 p-16">
+          <div className="bg-white flex flex-col items-center justify-center rounded-xl mt-8 p-16">
             <div>
               <h2 className="text-2xl font-bold text-center">{card.title}</h2>
               <img

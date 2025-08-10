@@ -6,6 +6,7 @@ import Navbar from "../components/Navbar";
 import MarketNikeCard from "../components/MarketNikeCard";
 import MarketCard from "../components/MarketCard";
 import Footer from "../components/Footer";
+import SwipeIcons from "../components/SwipeIcons";
 
 const Market = () => {
   return (
@@ -23,8 +24,17 @@ const Market = () => {
             >
               Purchase your Watchly
             </motion.h1>
+            <p className="text-2xl font-bold text-center text-white mt-4">
+              You can buy max 20 items at a time
+            </p>
           </div>
           <MarketNikeCard />
+          <p className="text-2xl font-bold text-center text-white mt-16">
+            Swipe to choose your Watchly color
+          </p>
+          <div className="flex justify-center mt-4">
+            <SwipeIcons className="w-30 h-30" />
+          </div>
           <MarketCard />
         </Container>
         <Footer />
