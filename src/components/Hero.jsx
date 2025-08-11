@@ -15,7 +15,7 @@ const Hero = () => {
       </div>
 
       <motion.div
-        className="flex justify-center items-center"
+        className="flex justify-center items-center px-4"
         amount={1}
         initial={{ opacity: 0 }}
         whileInView={{ opacity: 1 }}
@@ -24,7 +24,7 @@ const Hero = () => {
       >
         <img
           src="/assets/Watchly_bianco-removebg-preview.png"
-          className="w-80 h-80 mt-48"
+          className="w-48 h-48 sm:w-64 sm:h-64 md:w-80 md:h-80 mt-24 sm:mt-32 md:mt-48"
           alt="Watchly Logo"
         />
       </motion.div>

@@ -21,46 +21,48 @@ const CartComponent = () => {
 
   if (cartItems.length === 0) {
     return (
-      <div className="bg-white/20 flex flex-col items-center justify-center p-8 rounded-xl text-white">
-        <h1 className="text-3xl font-bold mb-4">Your cart is empty</h1>
-        <p className="">Add some products to start!</p>
+      <div className="bg-white/20 flex flex-col items-center justify-center p-4 sm:p-6 md:p-8 rounded-xl text-white">
+        <h1 className="text-2xl sm:text-3xl font-bold mb-2 sm:mb-4">
+          Your cart is empty
+        </h1>
+        <p className="text-sm sm:text-base">Add some products to start!</p>
       </div>
     );
   }
 
   return (
-    <div className="bg-white/20 p-8 text-white">
+    <div className="bg-white min-h-screen p-4 sm:p-6 md:p-8">
       <div className="max-w-4xl mx-auto">
-        <div className="flex justify-between items-center mb-8">
-          <h1 className="text-3xl font-bold">Cart</h1>
+        <div className="flex flex-col sm:flex-row justify-between items-start sm:items-center mb-6 sm:mb-8 gap-4">
+          <h1 className="text-2xl sm:text-3xl font-bold">Carrello</h1>
           <button
             onClick={clearCart}
-            className="bg-black text-white border border-white px-4 py-2 rounded-full hover:bg-white hover:text-black transition-colors cursor-pointer"
+            className="bg-red-500 text-white px-3 sm:px-4 py-2 rounded-lg hover:bg-red-600 transition-colors text-sm sm:text-base"
           >
             Clear cart
           </button>
         </div>
 
-        <div className="space-y-6">
+        <div className="space-y-4 sm:space-y-6">
           {cartItems.map((item) => (
             <div
               key={`${item.id}-${item.type}`}
-              className="flex items-center gap-6 p-6 bg-black/60 rounded-lg"
+              className="flex flex-col sm:flex-row items-start sm:items-center gap-4 sm:gap-6 p-4 sm:p-6 bg-gray-50 rounded-lg"
             >
               <img
                 src={item.image}
                 alt={item.name}
-                className="w-24 h-24 object-cover rounded-lg"
+                className="w-20 h-20 sm:w-24 sm:h-24 object-cover rounded-lg"
               />
 
-              <div className="flex-1">
-                <h3 className="text-xl font-semibold text-white">
+              <div className="flex-1 min-w-0">
+                <h3 className="text-lg sm:text-xl font-semibold text-gray-800 truncate">
                   {item.name}
                 </h3>
-                <p className="">${item.price}</p>
+                <p className="text-sm sm:text-base">${item.price}</p>
               </div>
 
-              <div className="flex items-center gap-4">
+              <div className="flex flex-col sm:flex-row items-start sm:items-center gap-4 w-full sm:w-auto">
                 <div className="flex items-center gap-2">
                   <button
                     onClick={() =>
@@ -70,12 +72,15 @@ const CartComponent = () => {
                         item.quantity - 1
                       )
                     }
-                    className="w-8 h-8 flex items-center justify-center bg-gray-500 rounded-full hover:bg-gray-600 transition-colors cursor-pointer"
+                    className="w-6 h-6 sm:w-8 sm:h-8 flex items-center justify-center bg-gray-200 rounded-full hover:bg-gray-300 transition-colors"
                   >
-                    <FontAwesomeIcon icon={faMinus} className="text-sm" />
+                    <FontAwesomeIcon
+                      icon={faMinus}
+                      className="text-xs sm:text-sm"
+                    />
                   </button>
 
-                  <span className="w-12 text-center font-semibold">
+                  <span className="w-8 sm:w-12 text-center font-semibold text-sm sm:text-base">
                     {item.quantity}
                   </span>
 
@@ -87,21 +92,24 @@ const CartComponent = () => {
                         item.quantity + 1
                       )
                     }
-                    className="w-8 h-8 flex items-center justify-center bg-gray-500 rounded-full hover:bg-gray-600 transition-colors cursor-pointer"
+                    className="w-6 h-6 sm:w-8 sm:h-8 flex items-center justify-center bg-gray-200 rounded-full hover:bg-gray-300 transition-colors"
                   >
-                    <FontAwesomeIcon icon={faPlus} className="text-sm" />
+                    <FontAwesomeIcon
+                      icon={faPlus}
+                      className="text-xs sm:text-sm"
+                    />
                   </button>
                 </div>
 
                 <div className="text-right">
-                  <p className="font-semibold text-lg">
+                  <p className="font-semibold text-base sm:text-lg">
                     ${item.price * item.quantity}
                   </p>
                 </div>
 
                 <button
                   onClick={() => removeFromCart(item.id, item.type)}
-                  className="text-gray-100 hover:text-red-500 transition-colors cursor-pointer"
+                  className="text-red-500 hover:text-red-700 transition-colors"
                 >
                   <FontAwesomeIcon icon={faTrash} />
                 </button>
@@ -110,16 +118,18 @@ const CartComponent = () => {
           ))}
         </div>
 
-        <div className="mt-8 p-6 bg-gray-100 rounded-lg">
+        <div className="mt-6 sm:mt-8 p-4 sm:p-6 bg-gray-100 rounded-lg">
           <div className="flex justify-between items-center">
-            <h2 className="text-2xl font-bold text-gray-800">Amount</h2>
-            <p className="text-3xl font-bold text-gray-800">
+            <h2 className="text-xl sm:text-2xl font-bold text-gray-800">
+              Totale
+            </h2>
+            <p className="text-2xl sm:text-3xl font-bold text-gray-800">
               ${getTotalPrice()}
             </p>
           </div>
 
-          <button className="w-full mt-4 bg-white text-black border border-black py-3 rounded-full hover:bg-black hover:text-white transition-colors duration-300 font-semibold cursor-pointer">
-            Checkout
+          <button className="w-full mt-4 bg-black text-white py-3 rounded-lg hover:bg-gray-800 transition-colors font-semibold text-sm sm:text-base">
+            Procedi all'acquisto
           </button>
         </div>
       </div>

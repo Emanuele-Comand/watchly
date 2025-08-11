@@ -13,21 +13,21 @@ const MoreAbout = ({ setIsMoreAboutOpen }) => {
       transition={{ duration: 0.3 }}
     >
       <motion.div
-        className="bg-white rounded-lg max-w-6xl max-h-[80vh] relative overflow-y-scroll scrollbar-hide p-16"
+        className="bg-white rounded-lg max-w-6xl max-h-[80vh] relative overflow-y-scroll scrollbar-hide p-4 sm:p-8 md:p-12 lg:p-16 mx-4"
         initial={{ opacity: 0, scale: 0.9 }}
         animate={{ opacity: 1, scale: 1 }}
         transition={{ duration: 0.5 }}
       >
         <motion.div
-          className="absolute top-4 right-4 text-2xl cursor-pointer hover:text-gray-600"
+          className="absolute top-2 sm:top-4 right-2 sm:right-4 text-xl sm:text-2xl cursor-pointer hover:text-gray-600 z-10"
           onClick={() => setIsMoreAboutOpen(false)}
           variants={animations.buttonVariants}
         >
-          <FontAwesomeIcon icon={faCircleXmark} className="fa-2x" />
+          <FontAwesomeIcon icon={faCircleXmark} className="fa-lg sm:fa-2x" />
         </motion.div>
 
         <motion.p
-          className=""
+          className="text-sm sm:text-base"
           variants={animations.subtitleVariants}
           initial="hidden"
           whileInView="visible"
@@ -37,7 +37,7 @@ const MoreAbout = ({ setIsMoreAboutOpen }) => {
         </motion.p>
 
         <motion.h2
-          className="text-4xl font-bold mt-4"
+          className="text-2xl sm:text-3xl md:text-4xl font-bold mt-2 sm:mt-4"
           variants={animations.titleVariants}
           initial="hidden"
           whileInView="visible"
@@ -47,17 +47,21 @@ const MoreAbout = ({ setIsMoreAboutOpen }) => {
         </motion.h2>
 
         <motion.div
-          className="bg-gray-200 rounded-xl mt-16"
+          className="bg-gray-200 rounded-xl mt-8 sm:mt-12 md:mt-16"
           variants={animations.subtitleVariants}
           initial="hidden"
           whileInView="visible"
           viewport={{ once: true, amount: 0.3 }}
         >
-          <img src="/assets/straps.webp" alt="nike straps" />
+          <img
+            src="/assets/straps.webp"
+            alt="nike straps"
+            className="w-full h-auto"
+          />
         </motion.div>
 
         <motion.p
-          className="text-lg pt-4 font-semibold"
+          className="text-base sm:text-lg pt-2 sm:pt-4 font-semibold"
           variants={animations.subtitleVariants}
           initial="hidden"
           whileInView="visible"
@@ -67,7 +71,7 @@ const MoreAbout = ({ setIsMoreAboutOpen }) => {
         </motion.p>
 
         <motion.p
-          className="mt-36"
+          className="mt-16 sm:mt-24 md:mt-36 text-sm sm:text-base"
           variants={animations.subtitleVariants}
           initial="hidden"
           whileInView="visible"
@@ -77,7 +81,7 @@ const MoreAbout = ({ setIsMoreAboutOpen }) => {
         </motion.p>
 
         <motion.div
-          className="mt-4 text-4xl font-bold"
+          className="mt-2 sm:mt-4 text-2xl sm:text-3xl md:text-4xl font-bold"
           variants={animations.titleVariants}
           initial="hidden"
           whileInView="visible"
@@ -87,7 +91,7 @@ const MoreAbout = ({ setIsMoreAboutOpen }) => {
         </motion.div>
 
         <motion.div
-          className="flex justify-center items-center bg-gray-200 p-8 rounded-xl mt-16"
+          className="flex justify-center items-center bg-gray-200 p-4 sm:p-6 md:p-8 rounded-xl mt-8 sm:mt-12 md:mt-16"
           variants={animations.subtitleVariants}
           initial="hidden"
           whileInView="visible"
@@ -96,7 +100,7 @@ const MoreAbout = ({ setIsMoreAboutOpen }) => {
           <img
             src="/assets/unique.avif"
             alt="nike display features"
-            className="h-[900px] w-auto object-cover"
+            className="h-auto max-h-[400px] sm:max-h-[600px] md:max-h-[800px] lg:h-[900px] w-auto object-cover"
           />
         </motion.div>
 

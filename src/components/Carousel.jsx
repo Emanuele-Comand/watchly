@@ -12,8 +12,8 @@ const Carousel = ({
   // Configurazione di default per Swiper
   const defaultConfig = {
     modules: [Pagination, Mousewheel],
-    spaceBetween: 160,
-    slidesPerView: 3,
+    spaceBetween: 20,
+    slidesPerView: 1,
     pagination: {
       clickable: true,
     },
@@ -25,6 +25,24 @@ const Carousel = ({
       enabled: true,
       forceToAxis: true,
       sensitivity: 1,
+    },
+    breakpoints: {
+      640: {
+        spaceBetween: 40,
+        slidesPerView: 2,
+      },
+      768: {
+        spaceBetween: 80,
+        slidesPerView: 2,
+      },
+      1024: {
+        spaceBetween: 120,
+        slidesPerView: 3,
+      },
+      1280: {
+        spaceBetween: 160,
+        slidesPerView: 3,
+      },
     },
   };
 

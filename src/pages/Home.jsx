@@ -23,7 +23,7 @@ const Home = () => {
     <Background>
       <Navbar />
       <Hero />
-      <div className="flex justify-center">
+      <div className="flex justify-center px-4 sm:px-6 md:px-8">
         <WatchlyNikeFusionCard />
       </div>
       <Features onCardClick={openOverlay} />
