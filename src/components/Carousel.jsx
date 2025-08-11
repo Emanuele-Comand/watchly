@@ -12,36 +12,48 @@ const Carousel = ({
   // Configurazione di default per Swiper
   const defaultConfig = {
     modules: [Pagination, Mousewheel],
-    spaceBetween: 20,
+    spaceBetween: 16,
     slidesPerView: 1,
     pagination: {
       clickable: true,
     },
     allowTouchMove: true,
     simulateTouch: true,
-    touchStartPreventDefault: true,
-    touchMoveStopPropagation: true,
+    touchStartPreventDefault: false,
+    touchMoveStopPropagation: false,
     mousewheel: {
-      enabled: true,
+      enabled: false, // Disabilitato su mobile
       forceToAxis: true,
       sensitivity: 1,
     },
     breakpoints: {
       640: {
-        spaceBetween: 40,
-        slidesPerView: 2,
+        spaceBetween: 24,
+        slidesPerView: 1,
+        mousewheel: {
+          enabled: true,
+        },
       },
       768: {
-        spaceBetween: 80,
+        spaceBetween: 32,
         slidesPerView: 2,
+        mousewheel: {
+          enabled: true,
+        },
       },
       1024: {
-        spaceBetween: 120,
-        slidesPerView: 3,
+        spaceBetween: 40,
+        slidesPerView: 2,
+        mousewheel: {
+          enabled: true,
+        },
       },
       1280: {
-        spaceBetween: 160,
+        spaceBetween: 60,
         slidesPerView: 3,
+        mousewheel: {
+          enabled: true,
+        },
       },
     },
   };
@@ -50,10 +62,12 @@ const Carousel = ({
   const finalConfig = { ...defaultConfig, ...swiperConfig };
 
   return (
-    <div className={className}>
+    <div className={`${className} w-full`}>
       <Swiper {...finalConfig}>
         {data.map((item) => (
-          <SwiperSlide key={item.id}>{renderCard(item)}</SwiperSlide>
+          <SwiperSlide key={item.id} className="flex justify-center">
+            {renderCard(item)}
+          </SwiperSlide>
         ))}
       </Swiper>
     </div>

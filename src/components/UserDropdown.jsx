@@ -19,28 +19,33 @@ const UserDropdown = ({ setIsUserDropdownOpen }) => {
   };
 
   return (
-    <div className="absolute top-full right-0 mt-2 bg-white rounded-lg shadow-lg border border-gray-200 min-w-32 py-2 z-50">
+    <div className="absolute top-full right-0 mt-2 bg-white rounded-lg shadow-lg border border-gray-200 min-w-28 sm:min-w-32 py-2 z-50">
       {isAuthenticated ? (
         <>
-          <div className="px-4 py-2 border-b border-gray-200">
-            <p className="text-sm text-gray-600">Welcome</p>
-            <p className="text-sm font-medium text-gray-800">{user?.name}</p>
+          <div className="px-3 sm:px-4 py-2 border-b border-gray-200">
+            <p className="text-xs sm:text-sm text-gray-600">Welcome</p>
+            <p className="text-xs sm:text-sm font-medium text-gray-800 truncate">
+              {user?.name}
+            </p>
           </div>
           <button
             onClick={() => {
               setIsUserDropdownOpen(false);
               navigate("/cart");
             }}
-            className="block w-full text-left px-4 py-2 text-gray-800 hover:bg-gray-200 transition-colors duration-200 cursor-pointer"
+            className="block w-full text-left px-3 sm:px-4 py-2 text-gray-800 hover:bg-gray-200 transition-colors duration-200 cursor-pointer text-xs sm:text-sm"
           >
             <div className="flex items-center gap-2">
-              <FontAwesomeIcon icon={faCartShopping} />
+              <FontAwesomeIcon
+                icon={faCartShopping}
+                className="text-xs sm:text-sm"
+              />
               <span>Cart</span>
             </div>
           </button>
           <button
             onClick={handleLogout}
-            className="block w-full text-left px-4 py-2 text-red-600 hover:bg-red-50 transition-colors duration-200 cursor-pointer"
+            className="block w-full text-left px-3 sm:px-4 py-2 text-red-600 hover:bg-red-50 transition-colors duration-200 cursor-pointer text-xs sm:text-sm"
           >
             Logout
           </button>
@@ -49,13 +54,13 @@ const UserDropdown = ({ setIsUserDropdownOpen }) => {
         <>
           <button
             onClick={() => handleAuthClick("signup")}
-            className="block w-full text-left px-4 py-2 text-gray-800 hover:bg-gray-200 transition-colors duration-200 cursor-pointer"
+            className="block w-full text-left px-3 sm:px-4 py-2 text-gray-800 hover:bg-gray-200 transition-colors duration-200 cursor-pointer text-xs sm:text-sm"
           >
             Sign up
           </button>
           <button
             onClick={() => handleAuthClick("login")}
-            className="block w-full text-left px-4 py-2 text-gray-800 hover:bg-gray-200 transition-colors duration-200 cursor-pointer"
+            className="block w-full text-left px-3 sm:px-4 py-2 text-gray-800 hover:bg-gray-200 transition-colors duration-200 cursor-pointer text-xs sm:text-sm"
           >
             Login
           </button>

@@ -26,7 +26,7 @@ const AddToCart = ({ quantity = 1, product }) => {
     <div className="flex flex-col items-center">
       <button
         onClick={handleAddToCart}
-        className={`border-2 border-black px-3 sm:px-4 py-2 rounded-full mt-4 sm:mt-6 md:mt-8 w-24 sm:w-28 md:w-32 whitespace-nowrap cursor-pointer transition-all duration-300 text-sm sm:text-base ${
+        className={`border-2 border-black px-2 sm:px-3 md:px-4 py-1.5 sm:py-2 rounded-full mt-2 sm:mt-4 md:mt-8 w-20 sm:w-24 md:w-32 whitespace-nowrap cursor-pointer transition-all duration-300 text-xs sm:text-sm md:text-base ${
           isAdded
             ? "bg-green-500 text-white border-green-500"
             : "bg-white text-black hover:bg-black hover:text-white"
@@ -37,7 +37,7 @@ const AddToCart = ({ quantity = 1, product }) => {
 
       {/* Toast di conferma */}
       {isAdded && (
-        <div className="mt-2 text-xs sm:text-sm text-green-600 font-medium text-center">
+        <div className="mt-1 sm:mt-2 text-xs sm:text-sm text-green-600 font-medium text-center">
           {quantity} {quantity === 1 ? "elemento" : "elementi"} aggiunto
           {quantity === 1 ? "" : "i"} al carrello
         </div>

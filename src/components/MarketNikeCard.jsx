@@ -15,23 +15,23 @@ const MarketNikeCard = () => {
 
   return (
     <>
-      <div className="bg-white flex flex-col items-center justify-center rounded-xl mt-8 sm:mt-12 md:mt-16 p-4 sm:p-8 md:p-16">
+      <div className="bg-white flex flex-col items-center justify-center rounded-xl mt-4 sm:mt-8 md:mt-16 p-3 sm:p-6 md:p-16 w-full max-w-[320px] sm:max-w-none mx-auto">
         <div className="flex flex-col items-center justify-center">
-          <h2 className="text-2xl sm:text-3xl md:text-4xl font-bold text-center">
+          <h2 className="text-xl sm:text-2xl md:text-4xl font-bold text-center">
             Watchly Nike Fusion
           </h2>
           <img
-            className="h-60 sm:h-72 md:h-84 w-auto"
+            className="h-48 sm:h-60 md:h-84 w-auto"
             src="/assets/Apple_watch_nike-removebg-preview.png"
             alt="Watchly Nike Fusion"
           />
         </div>
-        <p className="text-2xl sm:text-3xl md:text-4xl font-bold">$399</p>
+        <p className="text-xl sm:text-2xl md:text-4xl font-bold">$399</p>
         <div className="flex justify-center">
           <AddToCart quantity={quantity} product={nikeProduct} />
         </div>
       </div>
-      <div className="mt-4 sm:mt-6 md:mt-8 flex justify-center">
+      <div className="mt-2 sm:mt-4 md:mt-8 flex justify-center">
         <Counter count={quantity} setCount={setQuantity} />
       </div>
     </>

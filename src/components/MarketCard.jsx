@@ -71,27 +71,27 @@ const MarketCard = () => {
 
         return (
           <SwiperSlide key={card.id}>
-            <div className="bg-white flex flex-col items-center justify-center rounded-xl mt-4 sm:mt-6 md:mt-8 p-4 sm:p-8 md:p-16">
+            <div className="bg-white flex flex-col items-center justify-center rounded-xl mt-2 sm:mt-4 md:mt-8 p-3 sm:p-6 md:p-16 w-full max-w-[280px] sm:max-w-none mx-auto">
               <div>
-                <h2 className="text-xl sm:text-2xl font-bold text-center">
+                <h2 className="text-lg sm:text-xl md:text-2xl font-bold text-center">
                   {card.title}
                 </h2>
                 <img
-                  className={`mt-4 object-cover ${
+                  className={`mt-2 sm:mt-4 object-cover ${
                     index === 0
-                      ? "w-40 h-40 sm:w-48 sm:h-48 md:w-56 md:h-56 mt-4 sm:mt-6 md:mt-7"
-                      : "w-44 h-44 sm:w-52 sm:h-52 md:w-60 md:h-60"
+                      ? "w-32 h-32 sm:w-40 sm:h-40 md:w-56 md:h-56 mt-2 sm:mt-4 md:mt-7"
+                      : "w-36 h-36 sm:w-44 sm:h-44 md:w-60 md:h-60"
                   }`}
                   src={card.image}
                   alt={card.title}
                 />
-                <p className="text-xl sm:text-2xl font-bold text-center">
+                <p className="text-lg sm:text-xl md:text-2xl font-bold text-center">
                   $299
                 </p>
                 <AddToCart quantity={currentQuantity} product={card} />
               </div>
             </div>
-            <div className="mt-4 sm:mt-6 md:mt-8 flex justify-center">
+            <div className="mt-2 sm:mt-4 md:mt-8 flex justify-center">
               <Counter
                 count={currentQuantity}
                 setCount={(newCount) => updateQuantity(card.id, newCount)}

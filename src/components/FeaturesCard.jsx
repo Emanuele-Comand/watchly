@@ -4,9 +4,9 @@ import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 const FeaturesCard = ({ card, onClick }) => {
   return (
     <>
-      <div className="py-8 sm:py-12 md:py-16 text-center px-4">
+      <div className="py-4 sm:py-8 md:py-16 text-center px-2 sm:px-4">
         <div
-          className={`bg-white rounded-xl max-w-[368px] mx-auto cursor-pointer ${
+          className={`bg-white rounded-xl mx-auto cursor-pointer w-full max-w-[320px] sm:max-w-[368px] ${
             card.useBackground ? "bg-cover bg-center text-white" : ""
           }`}
         >
@@ -24,7 +24,7 @@ const FeaturesCard = ({ card, onClick }) => {
                   }
                 : {}
             }
-            className={`flex flex-col bg-white rounded-xl p-3 sm:p-4 transition-shadow min-h-[400px] sm:min-h-[500px] md:min-h-[572px] bg-cover bg-center ${
+            className={`flex flex-col bg-white rounded-xl p-3 sm:p-4 transition-shadow h-[280px] sm:h-[400px] md:min-h-[572px] bg-cover bg-center ${
               card.id === "security" ? "relative" : ""
             }`}
           >
@@ -36,7 +36,7 @@ const FeaturesCard = ({ card, onClick }) => {
               {card.subtitle}
             </p>
             <h3
-              className={`text-base sm:text-lg font-semibold ${
+              className={`text-sm sm:text-base md:text-lg font-semibold ${
                 card.useBackground ? "text-white" : " text-black"
               } pt-2 sm:pt-4`}
             >
@@ -45,15 +45,19 @@ const FeaturesCard = ({ card, onClick }) => {
             {!card.useBackground && (
               <img
                 src={card.image}
-                className={`w-full h-full object-cover rounded-lg py-8 sm:py-12 md:py-16 
-                  ${card.id === "health" ? "w-3/4 h-32 sm:h-40 mx-auto" : ""}`}
+                className={`w-full h-full object-cover rounded-lg py-4 sm:py-8 md:py-16 
+                  ${
+                    card.id === "health"
+                      ? "w-3/4 h-24 sm:h-32 md:h-40 mx-auto"
+                      : ""
+                  }`}
               />
             )}
             {card.id === "security" && (
               <div className="absolute inset-0 flex items-center justify-center">
-                <div className="w-32 h-32 sm:w-36 sm:h-36 md:w-40 md:h-40 border-4 sm:border-5 border-red-500 rounded-full flex items-center justify-center">
-                  <div className="w-24 h-24 sm:w-28 sm:h-28 md:w-32 md:h-32 border-4 sm:border-5 border-red-500 rounded-full flex items-center justify-center">
-                    <div className="bg-red-500 text-white rounded-full w-16 h-16 sm:w-20 sm:h-20 md:w-24 md:h-24 flex items-center justify-center font-bold text-sm sm:text-base md:text-lg">
+                <div className="w-24 h-24 sm:w-32 sm:h-32 md:w-40 md:h-40 border-4 sm:border-5 border-red-500 rounded-full flex items-center justify-center">
+                  <div className="w-16 h-16 sm:w-24 sm:h-24 md:w-32 md:h-32 border-4 sm:border-5 border-red-500 rounded-full flex items-center justify-center">
+                    <div className="bg-red-500 text-white rounded-full w-12 h-12 sm:w-16 sm:h-16 md:w-24 md:h-24 flex items-center justify-center font-bold text-xs sm:text-sm md:text-lg">
                       SOS
                     </div>
                   </div>
