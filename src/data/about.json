@@ -1,23 +1,20 @@
 [
   {
-    "id": 1,
     "title": "Who we are",
     "description": "Founded by a team of wearable‑tech enthusiasts and design visionaries, Watchly emerged from a shared passion for blending cutting‑edge innovation with everyday elegance. Our headquarters, nestled in the heart of a global tech hub, brings together engineers, designers, and health experts who live and breathe the art of crafting next‑generation smartwatches.",
-    "image": "src/assets/silhouette-confident-businesspeople.jpg",
+    "image": "/assets/silhouette-confident-businesspeople.jpg",
     "gradient": "from-white to-gray-950"
   },
   {
-    "id": 2,
     "title": "Our mission",
     "description": "At Watchly, we believe technology should empower and inspire. Our mission is to create wearable experiences that seamlessly integrate into daily life—enhancing productivity, wellness, and personal style. By listening closely to our community, we continuously refine our products to meet real needs, from advanced fitness tracking to effortless communication.",
-    "image": "src/assets/3d-rendering-arrow-hitting-target.jpg",
+    "image": "/assets/3d-rendering-arrow-hitting-target.jpg",
     "gradient": "from-gray-950 to-white"
   },
   {
-    "id": 3,
     "title": "How We Build Watchly",
-    "description": "Every Watchly device is the result of meticulous design and rigorous testing. We harness aerospace‑grade aluminum and ultra‑durable tempered glass for exceptional strength at a feather‑light weight. Our state‑of‑the‑art 1.78″ micro‑OLED display delivers brilliant colors, deep blacks, and ultra‑low power draw. Paired with a comfortable fluoroelastomer band and precision‑engineered sensors, Watchly stands at the forefront of wearable technology—where impeccable craftsmanship meets tomorrow’s innovations.",
-    "image": "src/assets/smartwatch-screen-digital-device.jpg",
+    "description": "Every Watchly device is the result of meticulous design and rigorous testing. We harness aerospace‑grade aluminum and ultra‑durable tempered glass for exceptional strength at a feather‑light weight. Our state‑of‑the‑art 1.78″ micro‑OLED display delivers brilliant colors, deep blacks, and ultra‑low power draw. Paired with a comfortable fluoroelastomer band and precision‑engineered sensors, Watchly stands at the forefront of wearable technology—where impeccable craftsmanship meets tomorrow's innovations.",
+    "image": "/assets/smartwatch-screen-digital-device.jpg",
     "gradient": "from-white to-gray-950"
   }
 ]

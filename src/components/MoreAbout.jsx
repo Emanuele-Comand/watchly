@@ -53,7 +53,7 @@ const MoreAbout = ({ setIsMoreAboutOpen }) => {
           whileInView="visible"
           viewport={{ once: true, amount: 0.3 }}
         >
-          <img src="src/assets/straps.webp" alt="nike straps" />
+          <img src="/assets/straps.webp" alt="nike straps" />
         </motion.div>
 
         <motion.p
@@ -94,7 +94,7 @@ const MoreAbout = ({ setIsMoreAboutOpen }) => {
           viewport={{ once: true, amount: 0.3 }}
         >
           <img
-            src="src/assets/unique.avif"
+            src="/assets/unique.avif"
             alt="nike display features"
             className="h-[900px] w-auto object-cover"
           />
@@ -138,7 +138,7 @@ const MoreAbout = ({ setIsMoreAboutOpen }) => {
           whileInView="visible"
           viewport={{ once: true, amount: 0.3 }}
         >
-          <img src="src/assets/fit.jpg" alt="fitness image with watchly" />
+          <img src="/assets/fit.jpg" alt="fitness image with watchly" />
         </motion.div>
 
         <motion.p

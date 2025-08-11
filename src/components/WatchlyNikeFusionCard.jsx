@@ -1,6 +1,6 @@
 import React from "react";
 import { motion } from "framer-motion";
-import watchImg from "/src/assets/Apple_watch_nike-removebg-preview.png";
+import watchImg from "/assets/Apple_watch_nike-removebg-preview.png";
 import Container from "./Container";
 import { useState } from "react";
 import MoreAbout from "./MoreAbout";

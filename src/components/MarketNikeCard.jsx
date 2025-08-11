@@ -9,7 +9,7 @@ const MarketNikeCard = () => {
     id: "nike-fusion",
     name: "Watchly Nike Fusion",
     price: 399,
-    image: "src/assets/Apple_watch_nike-removebg-preview.png",
+    image: "/assets/Apple_watch_nike-removebg-preview.png",
     type: "nike",
   };
 
@@ -20,7 +20,7 @@ const MarketNikeCard = () => {
           <h2 className="text-4xl font-bold">Watchly Nike Fusion</h2>
           <img
             className="h-84"
-            src="src/assets/Apple_watch_nike-removebg-preview.png"
+            src="/assets/Apple_watch_nike-removebg-preview.png"
             alt="Watchly Nike Fusion"
           />
         </div>

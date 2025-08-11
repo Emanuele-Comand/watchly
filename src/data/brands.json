@@ -1,26 +1,26 @@
 [
   {
-    "src": "src/assets/brands-logos/Nike.png",
+    "src": "/assets/brands-logos/Nike.png",
     "alt": "Nike"
   },
   {
-    "src": "src/assets/brands-logos/Amazon.com, Inc..png",
+    "src": "/assets/brands-logos/Amazon.com, Inc..png",
     "alt": "Amazon"
   },
   {
-    "src": "src/assets/brands-logos/Mastercard.png",
+    "src": "/assets/brands-logos/Mastercard.png",
     "alt": "Mastercard"
   },
   {
-    "src": "src/assets/brands-logos/Meta Platforms, Inc..png",
+    "src": "/assets/brands-logos/Meta Platforms, Inc..png",
     "alt": "Meta"
   },
   {
-    "src": "src/assets/brands-logos/Visa.png",
+    "src": "/assets/brands-logos/Visa.png",
     "alt": "Visa"
   },
   {
-    "src": "src/assets/brands-logos/Digital Realty Trust, Inc..png",
+    "src": "/assets/brands-logos/Digital Realty Trust, Inc..png",
     "alt": "Digital Reality"
   }
 ]

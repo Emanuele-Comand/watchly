@@ -25,7 +25,7 @@ const Navbar = () => {
       <div className="flex items-center">
         <Link to="/">
           <img
-            src="/src/assets/Watchly_bianco-removebg-preview.png"
+            src="/assets/Watchly_bianco-removebg-preview.png"
             className="w-25 h-25 cursor-pointer"
             onClick={() => {
               window.location.href = "#hero";

@@ -1,5 +1,5 @@
 import { motion } from "motion/react";
-import videoFile from "../assets/0_Apple_Watch_Smartwatch_3840x2160.mp4";
+import videoFile from "/assets/0_Apple_Watch_Smartwatch_3840x2160.mp4";
 
 const Hero = () => {
   return (
@@ -23,7 +23,7 @@ const Hero = () => {
         viewport={{ once: true, amount: 0.4 }}
       >
         <img
-          src="/src/assets/Watchly_bianco-removebg-preview.png"
+          src="/assets/Watchly_bianco-removebg-preview.png"
           className="w-80 h-80 mt-48"
           alt="Watchly Logo"
         />

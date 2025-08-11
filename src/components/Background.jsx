@@ -1,5 +1,5 @@
 import React from "react";
-import frame4Image from "../assets/Frame 4.png";
+import frame4Image from "/assets/Frame 4.png";
 
 const Background = ({
   children,

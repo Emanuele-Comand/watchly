@@ -7,9 +7,9 @@ const Footer = () => {
         <div className="flex justify-start items-start py-20 gap-10">
           <div className="w-64 h-64 flex items-center justify-start">
             <img
-              src="src/assets/Watchly nero.png"
-              alt="logo"
-              className="w-full h-full object-contain"
+              src="/assets/Watchly nero.png"
+              alt="Watchly Logo"
+              className="w-32 h-32"
             />
           </div>
           <div className="flex flex-col h-64 items-start justify-center w-56">
