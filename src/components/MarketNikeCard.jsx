@@ -25,7 +25,9 @@ const MarketNikeCard = () => {
           />
         </div>
         <p className="text-4xl font-bold">$399</p>
-        <AddToCart quantity={quantity} product={nikeProduct} />
+        <div className="flex justify-center">
+          <AddToCart quantity={quantity} product={nikeProduct} />
+        </div>
       </div>
       <div className="mt-8 flex justify-center">
         <Counter count={quantity} setCount={setQuantity} />

@@ -1,15 +1,20 @@
 import Container from "./Container";
 import BuyBtn from "./BuyBtn";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
-import { faCircleUser } from "@fortawesome/free-solid-svg-icons";
+import {
+  faCircleUser,
+  faShoppingCart,
+} from "@fortawesome/free-solid-svg-icons";
 import UserDropdown from "./UserDropdown";
 import { useState } from "react";
 import { Link } from "react-router-dom";
-import { useAuthStore } from "../stores";
+import { useAuthStore, useCartStore } from "../stores";
 
 const Navbar = () => {
   const [isUserDropdownOpen, setIsUserDropdownOpen] = useState(false);
   const { user, isAuthenticated } = useAuthStore();
+  const { getTotalItems } = useCartStore();
+  const totalItems = getTotalItems();
 
   return (
     <Container
@@ -50,9 +55,24 @@ const Navbar = () => {
         </a>
       </div>
 
-      {/* Colonna destra - BuyBtn e UserDropdown */}
+      {/* Colonna destra - BuyBtn, Cart e UserDropdown */}
       <div className="flex items-center gap-5 text-white">
         {isAuthenticated && <BuyBtn />}
+
+        {/* Indicatore del carrello */}
+        <Link to="/cart" className="relative">
+          <FontAwesomeIcon
+            icon={faShoppingCart}
+            size="lg"
+            className="hover:scale-110 transition-all duration-300"
+          />
+          {totalItems > 0 && (
+            <span className="absolute -top-2 -right-2 bg-red-500 text-white text-xs rounded-full w-5 h-5 flex items-center justify-center font-bold">
+              {totalItems > 99 ? "99+" : totalItems}
+            </span>
+          )}
+        </Link>
+
         <div className="relative cursor-pointer">
           <div className="flex items-center gap-2">
             <FontAwesomeIcon

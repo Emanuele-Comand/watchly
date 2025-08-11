@@ -31,7 +31,7 @@ const UserDropdown = ({ setIsUserDropdownOpen }) => {
               setIsUserDropdownOpen(false);
               navigate("/cart");
             }}
-            className="block w-full text-left px-4 py-2 text-gray-800 hover:bg-gray-200 transition-colors duration-200"
+            className="block w-full text-left px-4 py-2 text-gray-800 hover:bg-gray-200 transition-colors duration-200 cursor-pointer"
           >
             <div className="flex items-center gap-2">
               <FontAwesomeIcon icon={faCartShopping} />
@@ -40,7 +40,7 @@ const UserDropdown = ({ setIsUserDropdownOpen }) => {
           </button>
           <button
             onClick={handleLogout}
-            className="block w-full text-left px-4 py-2 text-red-600 hover:bg-red-50 transition-colors duration-200"
+            className="block w-full text-left px-4 py-2 text-red-600 hover:bg-red-50 transition-colors duration-200 cursor-pointer"
           >
             Logout
           </button>
@@ -49,13 +49,13 @@ const UserDropdown = ({ setIsUserDropdownOpen }) => {
         <>
           <button
             onClick={() => handleAuthClick("signup")}
-            className="block w-full text-left px-4 py-2 text-gray-800 hover:bg-gray-200 transition-colors duration-200"
+            className="block w-full text-left px-4 py-2 text-gray-800 hover:bg-gray-200 transition-colors duration-200 cursor-pointer"
           >
             Sign up
           </button>
           <button
             onClick={() => handleAuthClick("login")}
-            className="block w-full text-left px-4 py-2 text-gray-800 hover:bg-gray-200 transition-colors duration-200"
+            className="block w-full text-left px-4 py-2 text-gray-800 hover:bg-gray-200 transition-colors duration-200 cursor-pointer"
           >
             Login
           </button>

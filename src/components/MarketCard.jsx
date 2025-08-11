@@ -82,9 +82,7 @@ const MarketCard = () => {
                   alt={card.title}
                 />
                 <p className="text-2xl font-bold text-center">$299</p>
-                <div className="flex justify-center">
-                  <AddToCart quantity={currentQuantity} product={card} />
-                </div>
+                <AddToCart quantity={currentQuantity} product={card} />
               </div>
             </div>
             <div className="mt-8 flex justify-center">

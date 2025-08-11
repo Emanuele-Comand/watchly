@@ -3,7 +3,6 @@ import Container from "../components/Container";
 import Navbar from "../components/Navbar";
 import Footer from "../components/Footer";
 import CartComponent from "../components/CartComponent";
-import OrderSummary from "../components/OrderSummary";
 
 const Cart = () => {
   return (
@@ -13,9 +12,9 @@ const Cart = () => {
         <Container>
           <div className="flex items-center justify-center gap-16 pt-40">
             <CartComponent />
-            <OrderSummary />
           </div>
         </Container>
+        <Footer />
       </Background>
     </>
   );

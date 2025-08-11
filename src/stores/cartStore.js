@@ -10,11 +10,15 @@ const useCartStore = create((set, get) => ({
       );
 
       if (existingItem) {
-        // Aggiorna la quantità se l'item esiste già
+        // Somma la nuova quantità a quella esistente
+        const newQuantity = existingItem.quantity + item.quantity;
+        // Limita la quantità massima a 20
+        const finalQuantity = Math.min(newQuantity, 20);
+
         return {
           cartItems: state.cartItems.map((cartItem) =>
             cartItem.id === item.id && cartItem.type === item.type
-              ? { ...cartItem, quantity: item.quantity }
+              ? { ...cartItem, quantity: finalQuantity }
               : cartItem
           ),
         };
