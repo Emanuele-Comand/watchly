@@ -1,7 +1,18 @@
 import AddToCart from "./AddToCart";
 import Counter from "./Counter";
+import { useState } from "react";
 
 const MarketNikeCard = () => {
+  const [quantity, setQuantity] = useState(1);
+
+  const nikeProduct = {
+    id: "nike-fusion",
+    name: "Watchly Nike Fusion",
+    price: 399,
+    image: "src/assets/Apple_watch_nike-removebg-preview.png",
+    type: "nike",
+  };
+
   return (
     <>
       <div className="bg-white flex flex-col items-center justify-center rounded-xl mt-16 p-16">
@@ -14,10 +25,10 @@ const MarketNikeCard = () => {
           />
         </div>
         <p className="text-4xl font-bold">$399</p>
-        <AddToCart />
+        <AddToCart quantity={quantity} product={nikeProduct} />
       </div>
       <div className="mt-8 flex justify-center">
-        <Counter />
+        <Counter count={quantity} setCount={setQuantity} />
       </div>
     </>
   );
