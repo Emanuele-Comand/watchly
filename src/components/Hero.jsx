@@ -4,7 +4,6 @@ import videoFile from "/assets/0_Apple_Watch_Smartwatch_3840x2160.mp4";
 const Hero = () => {
   return (
     <div className="relative w-full" id="hero">
-      {/* Video solo per desktop */}
       <div className="hidden lg:block max-h-[720px] mx-auto relative">
         <video
           src={videoFile}
@@ -15,8 +14,7 @@ const Hero = () => {
         />
       </div>
 
-      {/* Immagine statica per mobile e tablet */}
-      <div className="lg:hidden w-full h-screen bg-gradient-to-b from-black to-gray-900 flex items-center justify-center">
+      <div className="lg:hidden w-full h-screen flex items-center justify-center">
         <div className="text-center px-4 sm:px-6 md:px-8">
           <img
             src="/assets/Watchly_bianco-removebg-preview.png"
@@ -32,7 +30,6 @@ const Hero = () => {
         </div>
       </div>
 
-      {/* Logo overlay per desktop */}
       <motion.div
         className="hidden lg:flex justify-center items-center"
         amount={1}

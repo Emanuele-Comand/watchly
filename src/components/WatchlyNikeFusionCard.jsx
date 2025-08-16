@@ -50,7 +50,7 @@ const WatchlyNikeFusionCard = () => {
   return (
     <>
       {/* Versione Mobile - senza animazioni */}
-      <div className="w-full lg:hidden">
+      <div className="w-full px-4 sm:px-6 lg:hidden">
         <div className="bg-white rounded-25px flex flex-col gap-8 sm:gap-16 md:gap-32 lg:gap-40 md:flex-row items-center py-8 sm:py-12 md:py-16 lg:py-16 justify-center relative overflow-hidden mt-8 lg:mt-0 p-4 lg:p-0 w-full lg:w-auto">
           <div className="absolute left-0 top-0 bottom-0 flex items-center rotate-180 pb-[56px]">
             <DotPattern position="left" />
