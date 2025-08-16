@@ -13,6 +13,8 @@ const FeaturesCarousel = ({ featuresData, onCardClick }) => {
     slidesPerView: 1,
     pagination: {
       clickable: true,
+      dynamicBullets: true,
+      dynamicMainBullets: 3,
     },
     allowTouchMove: true,
     simulateTouch: true,
@@ -36,11 +38,13 @@ const FeaturesCarousel = ({ featuresData, onCardClick }) => {
   };
 
   return (
-    <Carousel
-      data={featuresData}
-      renderCard={renderFeaturesCard}
-      swiperConfig={responsiveConfig}
-    />
+    <div className="px-4 sm:px-6 md:px-8 lg:ml-[140px]">
+      <Carousel
+        data={featuresData}
+        renderCard={renderFeaturesCard}
+        swiperConfig={responsiveConfig}
+      />
+    </div>
   );
 };
 

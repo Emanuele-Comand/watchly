@@ -111,12 +111,7 @@ const Features = ({ onCardClick }) => {
           </motion.h1>
         </motion.div>
       </Container>
-      <div className="ml-[140px]">
-        <FeaturesCarousel
-          featuresData={featuresData}
-          onCardClick={onCardClick}
-        />
-      </div>
+      <FeaturesCarousel featuresData={featuresData} onCardClick={onCardClick} />
     </>
   );
 };
