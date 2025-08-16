@@ -24,12 +24,12 @@ const Navbar = () => {
 
   return (
     <div className="fixed top-0 left-0 right-0 z-50 bg-black/80 backdrop-blur-md">
-      <div className="flex items-center justify-between px-2 sm:px-4 md:px-8 lg:px-16 xl:px-32 py-1 sm:py-2 md:py-3">
+      <div className="flex items-center justify-between px-3 sm:px-6 md:px-8 lg:px-16 xl:px-32 py-2 sm:py-3 md:py-4">
         <div className="flex items-center">
           <Link to="/">
             <img
               src="/assets/Watchly_bianco-removebg-preview.png"
-              className="w-12 h-12 sm:w-16 sm:h-16 md:w-20 md:h-20 lg:w-25 lg:h-25 cursor-pointer"
+              className="w-14 h-14 sm:w-18 sm:h-18 md:w-22 md:h-22 lg:w-25 lg:h-25 cursor-pointer"
               onClick={() => {
                 window.location.href = "#hero";
               }}
@@ -61,7 +61,7 @@ const Navbar = () => {
         </div>
 
         {/* Colonna destra - BuyBtn, Cart e UserDropdown */}
-        <div className="flex items-center gap-2 sm:gap-3 md:gap-4 lg:gap-5 text-white">
+        <div className="flex items-center gap-2 sm:gap-4 md:gap-5 lg:gap-5 text-white">
           {isAuthenticated && <BuyBtn />}
 
           {/* Indicatore del carrello */}
@@ -72,7 +72,7 @@ const Navbar = () => {
               className="hover:scale-110 transition-all duration-300"
             />
             {totalItems > 0 && (
-              <span className="absolute -top-1 -right-1 bg-red-500 text-white text-xs rounded-full w-4 h-4 flex items-center justify-center font-bold">
+              <span className="absolute -top-1 -right-1 sm:-top-2 sm:-right-2 bg-red-500 text-white text-xs rounded-full w-4 h-4 sm:w-5 sm:h-5 flex items-center justify-center font-bold">
                 {totalItems > 99 ? "99+" : totalItems}
               </span>
             )}
@@ -99,7 +99,7 @@ const Navbar = () => {
               <FontAwesomeIcon
                 icon={faCircleUser}
                 size="lg"
-                className="md:text-xl lg:text-2xl"
+                className="sm:text-xl md:text-2xl lg:text-2xl"
                 onMouseEnter={() => setIsUserDropdownOpen(true)}
               />
               {isAuthenticated && user && (
@@ -120,31 +120,33 @@ const Navbar = () => {
       {/* Menu mobile e tablet */}
       {isMobileMenuOpen && (
         <div className="lg:hidden bg-black/95 backdrop-blur-md border-t border-gray-700">
-          <div className="flex flex-col items-center py-4 space-y-3 text-white px-4">
+          <div className="flex flex-col items-center py-4 sm:py-6 space-y-3 sm:space-y-4 text-white px-4 sm:px-6">
             <a
-              className="hover:text-gray-300 transition-colors text-base font-medium py-2"
+              className="hover:text-gray-300 transition-colors text-base sm:text-lg font-medium py-2 sm:py-3"
               href="#features"
               onClick={() => setIsMobileMenuOpen(false)}
             >
               Features
             </a>
             <a
-              className="hover:text-gray-300 transition-colors text-base font-medium py-2"
+              className="hover:text-gray-300 transition-colors text-base sm:text-lg font-medium py-2 sm:py-3"
               href="#reviews"
               onClick={() => setIsMobileMenuOpen(false)}
             >
               Reviews
             </a>
             <a
-              className="hover:text-gray-300 transition-colors text-base font-medium py-2"
+              className="hover:text-gray-300 transition-colors text-base sm:text-lg font-medium py-2 sm:py-3"
               href="#about"
               onClick={() => setIsMobileMenuOpen(false)}
             >
               About us
             </a>
             {isAuthenticated && user && (
-              <div className="pt-3 border-t border-gray-600 w-full text-center">
-                <span className="text-sm font-medium">Hi, {user.name}</span>
+              <div className="pt-3 sm:pt-4 border-t border-gray-600 w-full text-center">
+                <span className="text-sm sm:text-base font-medium">
+                  Hi, {user.name}
+                </span>
               </div>
             )}
           </div>
