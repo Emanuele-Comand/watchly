@@ -51,7 +51,6 @@ const Features = ({ onCardClick }) => {
             <DragDropIcon className="w-30 h-30" />
           </motion.div>
 
-          {/* Mobile/Tablet Layout - Vertical */}
           <div className="w-full pt-16 flex flex-col lg:hidden items-center">
             <div className="text-white mb-8">
               <p className="text-3xl sm:text-4xl md:text-5xl font-bold uppercase text-center">
@@ -81,7 +80,6 @@ const Features = ({ onCardClick }) => {
             </div>
           </div>
 
-          {/* Desktop Layout - Horizontal */}
           <div className="w-full pt-16 grid grid-cols-3 justify-items-center items-center hidden lg:grid">
             <div className="text-white pt-20">
               <p className="text-6xl font-bold uppercase">Super thin</p>
