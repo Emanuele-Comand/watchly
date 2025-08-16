@@ -57,22 +57,6 @@ const Features = ({ onCardClick }) => {
                 Super thin
               </p>
             </div>
-            <Canvas
-              camera={{ position: [0, 0, 5], fov: 70 }}
-              style={{
-                height: "300px",
-                width: "100%",
-                maxWidth: "400px",
-                cursor: "grab",
-              }}
-            >
-              <OrbitControls
-                enablePan={true}
-                enableZoom={false}
-                enableRotate={true}
-              />
-              <FirstGLTF />
-            </Canvas>
             <div className="text-white mt-8">
               <p className="text-3xl sm:text-4xl md:text-5xl font-bold uppercase text-center">
                 Quality materials
