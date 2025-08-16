@@ -17,16 +17,16 @@ const Hero = () => {
 
       {/* Immagine statica per mobile e tablet */}
       <div className="lg:hidden w-full h-screen bg-gradient-to-b from-black to-gray-900 flex items-center justify-center">
-        <div className="text-center px-4">
+        <div className="text-center px-4 sm:px-6 md:px-8">
           <img
             src="/assets/Watchly_bianco-removebg-preview.png"
-            className="w-48 h-48 sm:w-64 sm:h-64 mx-auto mb-8"
+            className="w-32 h-32 sm:w-40 sm:h-40 md:w-48 md:h-48 mx-auto mb-4 sm:mb-6 md:mb-8"
             alt="Watchly Logo"
           />
-          <h1 className="text-3xl sm:text-4xl font-bold text-white mb-4">
+          <h1 className="text-2xl sm:text-3xl md:text-4xl font-bold text-white mb-2 sm:mb-3 md:mb-4">
             Welcome to Watchly
           </h1>
-          <p className="text-gray-300 text-lg">
+          <p className="text-gray-300 text-sm sm:text-base md:text-lg">
             Discover the future of smartwatches
           </p>
         </div>
