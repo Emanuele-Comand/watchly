@@ -38,13 +38,23 @@ const FeaturesCarousel = ({ featuresData, onCardClick }) => {
   };
 
   return (
-    <div className="px-4 sm:px-6 md:px-8 lg:ml-[140px]">
-      <Carousel
-        data={featuresData}
-        renderCard={renderFeaturesCard}
-        swiperConfig={responsiveConfig}
-      />
-    </div>
+    <>
+      <div className="px-4 sm:px-6 md:px-8 flex justify-center lg:hidden">
+        <Carousel
+          data={featuresData}
+          renderCard={renderFeaturesCard}
+          swiperConfig={responsiveConfig}
+        />
+      </div>
+
+      <div className="hidden lg:block lg:ml-[140px]">
+        <Carousel
+          data={featuresData}
+          renderCard={renderFeaturesCard}
+          swiperConfig={responsiveConfig}
+        />
+      </div>
+    </>
   );
 };
 
