@@ -24,12 +24,12 @@ const Navbar = () => {
 
   return (
     <div className="fixed top-0 left-0 right-0 z-50 bg-black/80 backdrop-blur-md">
-      <div className="flex items-center justify-between px-4 sm:px-6 md:px-8 lg:px-16 xl:px-32 py-2 sm:py-3">
+      <div className="flex items-center justify-between px-2 sm:px-4 md:px-8 lg:px-16 xl:px-32 py-1 sm:py-2 md:py-3">
         <div className="flex items-center">
           <Link to="/">
             <img
               src="/assets/Watchly_bianco-removebg-preview.png"
-              className="w-16 h-16 sm:w-20 sm:h-20 md:w-25 md:h-25 cursor-pointer"
+              className="w-12 h-12 sm:w-16 sm:h-16 md:w-20 md:h-20 lg:w-25 lg:h-25 cursor-pointer"
               onClick={() => {
                 window.location.href = "#hero";
               }}
@@ -61,7 +61,7 @@ const Navbar = () => {
         </div>
 
         {/* Colonna destra - BuyBtn, Cart e UserDropdown */}
-        <div className="flex items-center gap-3 sm:gap-4 md:gap-5 text-white">
+        <div className="flex items-center gap-2 sm:gap-3 md:gap-4 lg:gap-5 text-white">
           {isAuthenticated && <BuyBtn />}
 
           {/* Indicatore del carrello */}
@@ -72,7 +72,7 @@ const Navbar = () => {
               className="hover:scale-110 transition-all duration-300"
             />
             {totalItems > 0 && (
-              <span className="absolute -top-1 -right-1 sm:-top-2 sm:-right-2 bg-red-500 text-white text-xs rounded-full w-4 h-4 sm:w-5 sm:h-5 flex items-center justify-center font-bold">
+              <span className="absolute -top-1 -right-1 bg-red-500 text-white text-xs rounded-full w-4 h-4 flex items-center justify-center font-bold">
                 {totalItems > 99 ? "99+" : totalItems}
               </span>
             )}
