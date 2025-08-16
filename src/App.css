@@ -1,6 +1,5 @@
 @import "tailwindcss";
 
-/* Background responsive */
 .bg-responsive {
   background-image: none;
 }
