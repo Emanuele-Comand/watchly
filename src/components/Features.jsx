@@ -50,7 +50,39 @@ const Features = ({ onCardClick }) => {
           >
             <DragDropIcon className="w-30 h-30" />
           </motion.div>
-          <div className="w-full pt-16 grid grid-cols-3 justify-items-center items-center">
+
+          {/* Mobile/Tablet Layout - Vertical */}
+          <div className="w-full pt-16 flex flex-col lg:hidden items-center">
+            <div className="text-white mb-8">
+              <p className="text-3xl sm:text-4xl md:text-5xl font-bold uppercase text-center">
+                Super thin
+              </p>
+            </div>
+            <Canvas
+              camera={{ position: [0, 0, 5], fov: 70 }}
+              style={{
+                height: "300px",
+                width: "100%",
+                maxWidth: "400px",
+                cursor: "grab",
+              }}
+            >
+              <OrbitControls
+                enablePan={true}
+                enableZoom={false}
+                enableRotate={true}
+              />
+              <FirstGLTF />
+            </Canvas>
+            <div className="text-white mt-8">
+              <p className="text-3xl sm:text-4xl md:text-5xl font-bold uppercase text-center">
+                Quality materials
+              </p>
+            </div>
+          </div>
+
+          {/* Desktop Layout - Horizontal */}
+          <div className="w-full pt-16 grid grid-cols-3 justify-items-center items-center hidden lg:grid">
             <div className="text-white pt-20">
               <p className="text-6xl font-bold uppercase">Super thin</p>
             </div>
@@ -69,6 +101,7 @@ const Features = ({ onCardClick }) => {
               <p className="text-6xl font-bold uppercase">Quality materials</p>
             </div>
           </div>
+
           <motion.h1
             className="text-5xl font-bold bg-gradient-to-b from-white to-gray-600 text-transparent bg-clip-text text-center pt-16"
             initial={{ opacity: 0, y: 100 }}
