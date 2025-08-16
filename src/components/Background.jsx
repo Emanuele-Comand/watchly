@@ -1,5 +1,4 @@
 import React from "react";
-import frame4Image from "/assets/Frame 4.png";
 
 const Background = ({
   children,
@@ -14,17 +13,11 @@ const Background = ({
         min-h-screen 
         bg-black 
         relative 
+        bg-responsive
         ${className}
       `
         .trim()
         .replace(/\s+/g, " ")}
-      style={{
-        backgroundImage: `url(${frame4Image})`,
-        backgroundSize: "cover",
-        backgroundPosition: "center",
-        backgroundRepeat: "no-repeat",
-        backgroundAttachment: "fixed",
-      }}
       {...props}
     >
       {overlay && (
