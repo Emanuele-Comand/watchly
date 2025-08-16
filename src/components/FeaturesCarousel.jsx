@@ -1,3 +1,4 @@
+import { Pagination, Mousewheel } from "swiper/modules";
 import Carousel from "./Carousel";
 import FeaturesCard from "./FeaturesCard";
 
