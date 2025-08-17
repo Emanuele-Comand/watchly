@@ -9,20 +9,20 @@ const Carousel = ({
   swiperConfig = {},
   className = "swiper-container",
 }) => {
-  // Configurazione di default per Swiper
+  // Configurazione di default per Swiper - più compatibile con mobile
   const defaultConfig = {
     modules: [Pagination, Mousewheel],
-    spaceBetween: 160,
-    slidesPerView: 3,
+    spaceBetween: 20,
+    slidesPerView: 1,
     pagination: {
       clickable: true,
     },
     allowTouchMove: true,
     simulateTouch: true,
-    touchStartPreventDefault: true,
-    touchMoveStopPropagation: true,
+    touchStartPreventDefault: false,
+    touchMoveStopPropagation: false,
     mousewheel: {
-      enabled: true,
+      enabled: false,
       forceToAxis: true,
       sensitivity: 1,
     },
