@@ -45,7 +45,7 @@ const FeaturesCarousel = ({ featuresData, onCardClick }) => {
 
   return (
     <>
-      <div className="px-4 sm:px-6 md:px-8 flex justify-center lg:hidden w-full max-w-6xl">
+      <div className="px-4 sm:px-6 md:px-8 lg:hidden w-full max-w-6xl mx-auto">
         <div style={{ width: "100%", minHeight: "600px" }}>
           <Carousel
             data={featuresData}

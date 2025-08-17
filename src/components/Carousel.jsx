@@ -9,7 +9,6 @@ const Carousel = ({
   swiperConfig = {},
   className = "swiper-container",
 }) => {
-  // Configurazione di default per Swiper - più compatibile con mobile
   const defaultConfig = {
     modules: [Pagination, Mousewheel],
     spaceBetween: 20,
@@ -28,7 +27,6 @@ const Carousel = ({
     },
   };
 
-  // Unisce la configurazione di default con quella personalizzata
   const finalConfig = { ...defaultConfig, ...swiperConfig };
 
   return (
