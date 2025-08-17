@@ -18,10 +18,10 @@ const FeaturesCarousel = ({ featuresData, onCardClick }) => {
     },
     allowTouchMove: true,
     simulateTouch: true,
-    touchStartPreventDefault: true,
-    touchMoveStopPropagation: true,
+    touchStartPreventDefault: false,
+    touchMoveStopPropagation: false,
     mousewheel: {
-      enabled: true,
+      enabled: false,
       forceToAxis: true,
       sensitivity: 1,
     },
@@ -29,10 +29,16 @@ const FeaturesCarousel = ({ featuresData, onCardClick }) => {
       640: {
         spaceBetween: 40,
         slidesPerView: 2,
+        mousewheel: {
+          enabled: false,
+        },
       },
       1024: {
         spaceBetween: 160,
         slidesPerView: 3,
+        mousewheel: {
+          enabled: true,
+        },
       },
     },
   };
