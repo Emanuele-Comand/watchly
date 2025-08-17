@@ -46,11 +46,13 @@ const FeaturesCarousel = ({ featuresData, onCardClick }) => {
   return (
     <>
       <div className="px-4 sm:px-6 md:px-8 flex justify-center lg:hidden w-full max-w-6xl">
-        <Carousel
-          data={featuresData}
-          renderCard={renderFeaturesCard}
-          swiperConfig={responsiveConfig}
-        />
+        <div style={{ width: "100%", minHeight: "600px" }}>
+          <Carousel
+            data={featuresData}
+            renderCard={renderFeaturesCard}
+            swiperConfig={responsiveConfig}
+          />
+        </div>
       </div>
 
       <div className="hidden lg:block lg:ml-[140px]">
