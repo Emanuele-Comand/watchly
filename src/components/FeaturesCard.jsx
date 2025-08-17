@@ -6,7 +6,7 @@ const FeaturesCard = ({ card, onClick }) => {
     <>
       <div className="py-8 sm:py-12 md:py-16 text-center">
         <div
-          className={`bg-white rounded-xl max-w-[320px] sm:max-w-[400px] md:max-w-[450px] lg:max-w-[368px] cursor-pointer ${
+          className={`bg-white rounded-xl max-w-[280px] sm:max-w-[320px] md:max-w-[350px] lg:max-w-[368px] cursor-pointer ${
             card.useBackground ? "bg-cover bg-center text-white" : ""
           }`}
         >
