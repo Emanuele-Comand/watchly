@@ -9,7 +9,6 @@ const BrandsBanner = () => {
   useEffect(() => {
     const calculateWidth = () => {
       if (contentRef.current) {
-        // Calcola la larghezza di una singola copia includendo il gap
         const totalWidth = contentRef.current.scrollWidth;
         const singleCopyWidth = totalWidth / 2;
         setContentWidth(singleCopyWidth);

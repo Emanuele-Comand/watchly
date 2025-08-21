@@ -39,19 +39,19 @@ const Features = ({ onCardClick }) => {
             <BuyBtn />
           </motion.div>
           <motion.p
-            className="text-white font-light italic text-lg py-8"
+            className="hidden lg:block text-white font-light italic text-lg py-8"
             variants={animations.subtitleVariants}
           >
             Grab the Whatcly model take a look
           </motion.p>
           <motion.div
-            className="flex justify-center items-center"
+            className="hidden lg:flex justify-center items-center"
             variants={animations.dragIconVariants}
           >
             <DragDropIcon className="w-30 h-30" />
           </motion.div>
 
-          <div className="w-full pt-16 flex flex-col lg:hidden items-center">
+          <div className="w-full pt-16 hidden items-center">
             <div className="text-white mb-8">
               <p className="text-3xl sm:text-4xl md:text-5xl font-bold uppercase text-center">
                 Super thin
