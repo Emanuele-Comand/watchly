@@ -5,7 +5,7 @@ import React from "react";
 const AboutUs = () => {
   return (
     <Container id="about">
-      <div className="flex flex-col items-center justify-center w-full">
+      <div className="flex flex-col items-center justify-center text-center w-full">
         <h1 className="text-5xl font-bold bg-gradient-to-b from-white to-gray-950 text-transparent bg-clip-text">
           ABOUT US
         </h1>
@@ -17,13 +17,13 @@ const AboutUs = () => {
                 <React.Fragment key={index}>
                   {index === 1 ? (
                     <>
-                      <div>
+                      <div className="order-2 lg:order-none">
                         <h2 className="text-2xl font-semibold text-center uppercase pb-10">
                           {item.title}
                         </h2>
                         <p>{item.description}</p>
                       </div>
-                      <div>
+                      <div className="order-1 lg:order-none">
                         <img
                           src={item.image}
                           alt={item.title}
