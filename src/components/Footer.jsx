@@ -107,7 +107,7 @@ const Footer = () => {
           </div>
         </div>
 
-        <div className="border-t border-gray-200 pt-6 lg:pt-8">
+        <div className="border-t pb-8 border-gray-200 pt-6 lg:pt-8">
           <p className="text-center font-semibold text-sm lg:text-base">
             Designed and developed by Emanuele Comand - @ All rigths deserved{" "}
           </p>
