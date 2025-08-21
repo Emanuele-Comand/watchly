@@ -30,7 +30,9 @@ const Carousel = ({
   const finalConfig = { ...defaultConfig, ...swiperConfig };
 
   return (
-    <div className={`${className} mx-auto lg:mx-0`}>
+    <div
+      className={`${className} flex justify-center items-center ml-32 mx-auto lg:mx-0`}
+    >
       <Swiper {...finalConfig}>
         {data.map((item) => (
           <SwiperSlide key={item.id}>{renderCard(item)}</SwiperSlide>
