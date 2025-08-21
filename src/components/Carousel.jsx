@@ -31,7 +31,7 @@ const Carousel = ({
 
   return (
     <div
-      className={`${className} flex justify-center items-center ml-32 mx-auto lg:mx-0`}
+      className={`${className} flex justify-center items-center min-w-[300px] ml-14 mx-auto lg:mx-0`}
     >
       <Swiper {...finalConfig}>
         {data.map((item) => (
