@@ -11,7 +11,7 @@ const AboutUs = () => {
         </h1>
         <div className="relative mt-20">
           <div className="absolute inset-0 bg-white/10 backdrop-blur-md rounded-xl border border-white/20"></div>
-          <div className="relative z-10 grid grid-cols-2 grid-row-3 text-white justify-center items-center gap-16 pt-20 p-10">
+          <div className="relative z-10 flex flex-col lg:grid lg:grid-cols-2 lg:grid-row-3 text-white justify-center items-center gap-8 lg:gap-16 pt-20 p-10">
             {about.map((item, index) => {
               return (
                 <React.Fragment key={index}>

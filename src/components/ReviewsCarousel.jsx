@@ -5,7 +5,6 @@ import ReviewsCard from "./ReviewsCard";
 const ReviewsCarousel = ({ reviewsData }) => {
   const renderReviewsCard = (review) => <ReviewsCard review={review} />;
 
-  // Configurazione responsive per il carosello delle reviews
   const reviewsSwiperConfig = {
     modules: [Pagination, Mousewheel],
     spaceBetween: 20,
