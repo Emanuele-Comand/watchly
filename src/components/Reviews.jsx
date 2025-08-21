@@ -47,7 +47,7 @@ const Reviews = () => {
           </motion.h2>
         </motion.div>
       </Container>
-      <div className="ml-[140px]">
+      <div>
         <ReviewsCarousel reviewsData={reviews} />
       </div>
     </>
