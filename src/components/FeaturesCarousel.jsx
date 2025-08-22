@@ -55,7 +55,7 @@ const FeaturesCarousel = ({ featuresData, onCardClick }) => {
         </div>
       </div>
 
-      <div className="hidden lg:block lg:ml-[140px]">
+      <div className="hidden lg:block lg:ml-[140px] lg:mr-[140px]">
         <Carousel
           data={featuresData}
           renderCard={renderFeaturesCard}
