@@ -37,8 +37,6 @@ const Navbar = () => {
             />
           </Link>
         </div>
-
-        {/* Menu desktop - nascosto su mobile e tablet */}
         <div className="hidden lg:flex absolute left-1/2 transform -translate-x-1/2 items-center gap-15 text-white">
           <a
             className="hover:scale-110 transition-all duration-300"
@@ -60,11 +58,9 @@ const Navbar = () => {
           </a>
         </div>
 
-        {/* Colonna destra - BuyBtn, Cart e UserDropdown */}
         <div className="flex items-center gap-2 sm:gap-4 md:gap-5 lg:gap-5 text-white">
           {isAuthenticated && <BuyBtn />}
 
-          {/* Indicatore del carrello */}
           <Link to="/cart" className="relative">
             <FontAwesomeIcon
               icon={faShoppingCart}
@@ -77,8 +73,6 @@ const Navbar = () => {
               </span>
             )}
           </Link>
-
-          {/* Menu hamburger per mobile e tablet */}
           <button
             onClick={toggleMobileMenu}
             className="lg:hidden text-white hover:text-gray-300 transition-colors p-1"
@@ -89,7 +83,6 @@ const Navbar = () => {
             />
           </button>
 
-          {/* User dropdown - nascosto su mobile e tablet quando menu è aperto */}
           <div
             className={`relative cursor-pointer ${
               isMobileMenuOpen ? "hidden" : "block"
@@ -117,7 +110,6 @@ const Navbar = () => {
         </div>
       </div>
 
-      {/* Menu mobile e tablet */}
       {isMobileMenuOpen && (
         <div className="lg:hidden bg-black/95 backdrop-blur-md border-t border-gray-700">
           <div className="flex flex-col items-center py-4 sm:py-6 space-y-3 sm:space-y-4 text-white px-4 sm:px-6">
